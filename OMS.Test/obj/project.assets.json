@@ -1431,11 +1431,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/OMS.Test/OMS.Test.csproj",
+      "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/OMS.Test/OMS.Test.csproj",
       "projectName": "OMS.Test",
-      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/OMS.Test/OMS.Test.csproj",
+      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/OMS.Test/OMS.Test.csproj",
       "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
-      "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/OMS.Test/obj/",
+      "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/OMS.Test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/abishiyambaskaran/.nuget/NuGet/NuGet.Config"

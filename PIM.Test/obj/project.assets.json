@@ -2856,11 +2856,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM.Test/PIM.Test.csproj",
+      "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM.Test/PIM.Test.csproj",
       "projectName": "PIM.Test",
-      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM.Test/PIM.Test.csproj",
+      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM.Test/PIM.Test.csproj",
       "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
-      "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM.Test/obj/",
+      "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM.Test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/abishiyambaskaran/.nuget/NuGet/NuGet.Config"
@@ -2875,11 +2875,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj": {
-              "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj"
+            "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj": {
+              "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj"
             },
-            "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj": {
-              "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj"
+            "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/SHOP.csproj": {
+              "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/SHOP.csproj"
             }
           }
         }

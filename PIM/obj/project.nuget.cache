@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0JomaQCAhZ4=",
+  "dgSpecHash": "p+w1cU6ddwU=",
   "success": true,
-  "projectFilePath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj",
+  "projectFilePath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj",
   "expectedPackageFiles": [
     "/Users/abishiyambaskaran/.nuget/packages/avalonia/11.2.1/avalonia.11.2.1.nupkg.sha512",
     "/Users/abishiyambaskaran/.nuget/packages/avalonia.angle.windows.natives/2.1.22045.20230930/avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",

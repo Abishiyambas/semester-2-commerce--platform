@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM.Test/DAM.Test.csproj": {}
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM.Test/DAM.Test.csproj": {}
   },
   "projects": {
-    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM.Test/DAM.Test.csproj": {
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM.Test/DAM.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM.Test/DAM.Test.csproj",
+        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM.Test/DAM.Test.csproj",
         "projectName": "DAM.Test",
-        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM.Test/DAM.Test.csproj",
+        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM.Test/DAM.Test.csproj",
         "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
-        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM.Test/obj/",
+        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM.Test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/abishiyambaskaran/.nuget/NuGet/NuGet.Config"

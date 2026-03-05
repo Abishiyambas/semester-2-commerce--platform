@@ -7064,11 +7064,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/OMS.Tests/OMS.Tests.csproj",
+      "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/OMS.Tests/OMS.Tests.csproj",
       "projectName": "OMS.Tests",
-      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/OMS.Tests/OMS.Tests.csproj",
+      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/OMS.Tests/OMS.Tests.csproj",
       "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
-      "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/OMS.Tests/obj/",
+      "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/OMS.Tests/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
@@ -7084,8 +7084,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/OMS/OMS.csproj": {
-              "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/OMS/OMS.csproj"
+            "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/OMS/OMS.csproj": {
+              "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/OMS/OMS.csproj"
             }
           }
         }

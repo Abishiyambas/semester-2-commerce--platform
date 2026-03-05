@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP_IntegrationTests/SHOP_IntegrationTests.csproj": {}
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP_IntegrationTests/SHOP_IntegrationTests.csproj": {}
   },
   "projects": {
-    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj": {
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj",
+        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj",
         "projectName": "PIM",
-        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj",
+        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj",
         "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
-        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/obj/",
+        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/abishiyambaskaran/.nuget/NuGet/NuGet.Config"
@@ -97,14 +97,14 @@
         }
       }
     },
-    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj": {
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/SHOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj",
+        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/SHOP.csproj",
         "projectName": "SHOP",
-        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj",
+        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/SHOP.csproj",
         "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
-        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/obj/",
+        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/abishiyambaskaran/.nuget/NuGet/NuGet.Config"
@@ -119,8 +119,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj": {
-                "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj"
+              "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj": {
+                "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj"
               }
             }
           }
@@ -198,14 +198,14 @@
         }
       }
     },
-    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP_IntegrationTests/SHOP_IntegrationTests.csproj": {
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP_IntegrationTests/SHOP_IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP_IntegrationTests/SHOP_IntegrationTests.csproj",
+        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP_IntegrationTests/SHOP_IntegrationTests.csproj",
         "projectName": "SHOP_IntegrationTests",
-        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP_IntegrationTests/SHOP_IntegrationTests.csproj",
+        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP_IntegrationTests/SHOP_IntegrationTests.csproj",
         "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
-        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP_IntegrationTests/obj/",
+        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP_IntegrationTests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/abishiyambaskaran/.nuget/NuGet/NuGet.Config"
@@ -220,8 +220,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj": {
-                "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj"
+              "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/SHOP.csproj": {
+                "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/SHOP.csproj"
               }
             }
           }

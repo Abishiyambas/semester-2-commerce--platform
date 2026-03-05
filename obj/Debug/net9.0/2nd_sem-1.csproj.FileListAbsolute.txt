@@ -1,0 +1,6 @@
+/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/obj/Debug/net9.0/2nd_sem-1.csproj.AssemblyReference.cache
+/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/obj/Debug/net9.0/2nd_sem-1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/obj/Debug/net9.0/2nd_sem-1.AssemblyInfoInputs.cache
+/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/obj/Debug/net9.0/2nd_sem-1.AssemblyInfo.cs
+/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/obj/Debug/net9.0/2nd_sem-1.csproj.CoreCompileInputs.cache
+/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/obj/Debug/net9.0/2nd_sem-1.sourcelink.json

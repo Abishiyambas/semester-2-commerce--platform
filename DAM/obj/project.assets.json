@@ -2053,11 +2053,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM/DAM.csproj",
+      "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM/DAM.csproj",
       "projectName": "DAM",
-      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM/DAM.csproj",
+      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM/DAM.csproj",
       "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
-      "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM/obj/",
+      "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/abishiyambaskaran/.nuget/NuGet/NuGet.Config"

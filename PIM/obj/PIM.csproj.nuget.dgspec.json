@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj": {}
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj": {}
   },
   "projects": {
-    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj": {
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj",
+        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj",
         "projectName": "PIM",
-        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj",
+        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/PIM.csproj",
         "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
-        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/obj/",
+        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/PIM/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/abishiyambaskaran/.nuget/NuGet/NuGet.Config"

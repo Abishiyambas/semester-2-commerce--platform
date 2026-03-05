@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O9445857GFo=",
+  "dgSpecHash": "zO9zgvozWOY=",
   "success": true,
-  "projectFilePath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM/DAM.csproj",
+  "projectFilePath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM/DAM.csproj",
   "expectedPackageFiles": [
     "/Users/abishiyambaskaran/.nuget/packages/avalonia/11.3.0/avalonia.11.3.0.nupkg.sha512",
     "/Users/abishiyambaskaran/.nuget/packages/avalonia.angle.windows.natives/2.1.22045.20230930/avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",
@@ -51,9 +51,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'SixLabors.ImageSharp' 3.1.8 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-rxmq-m78w-7wmc",
-      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM/DAM.csproj",
+      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM/DAM.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM/DAM.csproj",
+      "filePath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM/DAM.csproj",
       "libraryId": "SixLabors.ImageSharp",
       "targetGraphs": [
         "net9.0"

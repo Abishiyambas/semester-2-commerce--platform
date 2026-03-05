@@ -2722,11 +2722,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP_UnitTest/SHOP_UnitTest.csproj",
+      "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP_UnitTest/SHOP_UnitTest.csproj",
       "projectName": "SHOP_UnitTest",
-      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP_UnitTest/SHOP_UnitTest.csproj",
+      "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP_UnitTest/SHOP_UnitTest.csproj",
       "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
-      "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP_UnitTest/obj/",
+      "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP_UnitTest/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
@@ -2742,8 +2742,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj": {
-              "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj"
+            "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/SHOP.csproj": {
+              "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/SHOP.csproj"
             }
           }
         }

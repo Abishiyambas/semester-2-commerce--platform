@@ -22,68 +22,68 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SHOP
-build_property.ProjectDir = /Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/
+build_property.ProjectDir = /Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/App.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/AccessoriesView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/AccessoriesView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/CartView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/CartView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/CheckOutView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/CheckOutView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/ConfirmOrderPageView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/ConfirmOrderPageView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/DesktopView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/DesktopView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/FilteredSearchView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/FilteredSearchView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/HardwareView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/HardwareView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/HelpView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/HelpView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/HomePageView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/HomePageView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/LaptopView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/LaptopView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/LogInView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/LogInView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/MainView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/MainView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/OrderHistoryView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/OrderHistoryView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/OverviewView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/OverviewView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/PaymentCardView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/PaymentCardView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/PaymentMobilePayView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/PaymentMobilePayView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/ProductDetailPageView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/ProductDetailPageView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/RegisterUserView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/RegisterUserView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/Views/ResourcesView.axaml]
+[/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/SHOP/Views/ResourcesView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cpOp542zrQA=",
+  "dgSpecHash": "MXiSUcxKj5A=",
   "success": true,
-  "projectFilePath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/DAM.Test/DAM.Test.csproj",
+  "projectFilePath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/DAM.Test/DAM.Test.csproj",
   "expectedPackageFiles": [
     "/Users/abishiyambaskaran/.nuget/packages/coverlet.collector/6.0.2/coverlet.collector.6.0.2.nupkg.sha512",
     "/Users/abishiyambaskaran/.nuget/packages/microsoft.codecoverage/17.12.0/microsoft.codecoverage.17.12.0.nupkg.sha512",
