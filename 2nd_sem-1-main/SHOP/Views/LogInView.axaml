@@ -1,0 +1,84 @@
+<UserControl
+    Height="1050"
+    Width="1400"
+    mc:Ignorable="d"
+    x:Class="SHOP.Views.LogInView"
+    x:DataType="vm:LogInViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:SHOP.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+
+    <StackPanel Height="" Width="750">
+        <Border
+            BorderBrush="Gray"
+            BorderThickness="1"
+            CornerRadius="25"
+            Padding="5">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="50%, 100%" StartPoint="50%, 0%">
+                    <GradientStop Color="#A8E6CF" Offset="0" />
+                    <GradientStop Color="#46CDCF" Offset="0.5" />
+                    <GradientStop Color="#3D84A8" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel Grid.Column="0">
+                <TextBlock
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    Margin="0,20,0,0"
+                    Text="Login" />
+                <TextBlock Margin="0,20,0,10" Text="User/E-mail" />
+                <TextBox
+                    CornerRadius="25"
+                    GotFocus="ClearOnFocus"
+                    Name="UserName" />
+                <TextBlock Margin="0,20,0,10" Text="Password"  />
+                <TextBox CornerRadius="25" Name="Password" 
+                         GotFocus="ClearOnFocus" PasswordChar="*"/>
+
+                <Button
+                    Click="Login"
+                    Content="Login"
+                    CornerRadius="10"
+                    HorizontalAlignment="Right">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="100%, 50%" StartPoint="0%, 50%">
+                            <GradientStop Color="MediumSeaGreen" Offset="0" />
+                            <GradientStop Color="SeaGreen" Offset="0.5" />
+                            <GradientStop Color="ForestGreen" Offset="1" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="10"
+                                CornerRadius="10">
+                                <ContentPresenter
+                                    Content="{TemplateBinding Content}"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+        </Border>
+        <Border>
+            <Button Content="Register user" Command = "{Binding goToRegisterUserPageCommand }">
+                
+            </Button>
+        </Border>
+    </StackPanel>
+</UserControl>
+
+
+
+
+
+

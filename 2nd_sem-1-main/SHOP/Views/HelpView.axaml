@@ -1,0 +1,88 @@
+<UserControl
+    Height="1050"
+    Width="1400"
+    mc:Ignorable="d"
+    x:Class="SHOP.Views.HelpView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Border CornerRadius="25">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="50%, 100%" StartPoint="50%, 0%">
+                <GradientStop Color="#A8E6CF" Offset="0" />
+                <GradientStop Color="#46CDCF" Offset="0.5" />
+                <GradientStop Color="#3D84A8" Offset="1" />
+            </LinearGradientBrush>
+        </Border.Background>
+        <StackPanel Margin="20" Spacing="12">
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Text="Help and Support - Arne's Electronics" />
+            <TreeView Margin="20">
+
+                <!--  Orders & Delivery  -->
+                <TreeViewItem Header="Orders and Delivery">
+                    <TreeViewItem Header="How long does delivery take?">
+                        <TreeViewItem Header="Standard delivery in Denmark takes 2–4 business days." />
+                    </TreeViewItem>
+                    <TreeViewItem Header="Can I track my order?">
+                        <TreeViewItem Header="Yes, you'll receive a tracking number by email when your order ships." />
+                    </TreeViewItem>
+                    <TreeViewItem Header="Where is my order shipped from?">
+                        <TreeViewItem Header="Industriparken 17, 5000 Odense, Denmark" />
+                    </TreeViewItem>
+                </TreeViewItem>
+
+
+                <!--  Payment & Invoicing  -->
+                <TreeViewItem Header="Payment and Invoicing">
+                    <TreeViewItem Header="What payment methods do you accept?">
+                        <TreeViewItem Header="Cardpayment and MobilePay" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="Can I get a copy of my invoice?">
+                        <TreeViewItem Header="Yes, under 'My Orders' or by emailing support@SHOP.dk" />
+                    </TreeViewItem>
+                </TreeViewItem>
+
+                <!--  Repairs and Warranty  -->
+                <TreeViewItem Header="Repairs and Warranty">
+                    <TreeViewItem Header="How long is the warranty?">
+                        <TreeViewItem Header="All products come with a 2-year warranty in accordance with Danish consumer law." />
+                    </TreeViewItem>
+                </TreeViewItem>
+
+                <!--  Returns and Refunds  -->
+                <TreeViewItem Header="Returns and Refunds">
+                    <TreeViewItem Header="Can I return a product?">
+                        <TreeViewItem Header="Yes, you have 30 days to return an item in unused condition." />
+                    </TreeViewItem>
+                    <TreeViewItem Header="Where do I send returns?">
+                        <TreeViewItem Header="Arne's Electronics Returns Dept.&#10;Industriparken 17&#10;5000 Odense, Denmark" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="Refund processing">
+                        <TreeViewItem Header="Refunds are processed within 7 business days after we receive your return." />
+                    </TreeViewItem>
+                </TreeViewItem>
+
+                <!--  Contact  -->
+                <TreeViewItem Header="Contact Us">
+                    <TreeViewItem Header="Phone: +45 88 77 66 55" />
+                    <TreeViewItem Header="Email: support@SHOP.dk" />
+                </TreeViewItem>
+
+                <!--  Visit Our Store  -->
+                <TreeViewItem Header="Visit Our Store">
+                    <TreeViewItem Header="Store location">
+                        <TreeViewItem Header="Arne's Electronics Store&#10;Industriparken 17&#10;5000 Odense, Denmark" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="Opening hours">
+                        <TreeViewItem Header="Mon–Fri: 10:00–18:00 | Sat–Sun: 11:00–16:00" />
+                    </TreeViewItem>
+                </TreeViewItem>
+            </TreeView>
+        </StackPanel>
+    </Border>
+</UserControl>

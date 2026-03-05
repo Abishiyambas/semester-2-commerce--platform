@@ -1,0 +1,80 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="450"
+        Width="900" Height="450"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        x:Class="PIM_Presentation.EditProductWindow"
+        Title="Edit Product">
+
+    <Border Padding="30">
+        <Grid ColumnDefinitions="1.2* 1.2*" RowDefinitions="auto auto auto auto auto auto auto auto">
+
+            <!-- Name -->
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name"/>
+            <TextBox Grid.Row="1" Grid.Column="0" x:Name="ProductNameBox" MinWidth="150" MaxWidth="300"/>
+
+            <!-- Category -->
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Category"/>
+            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Spacing="5">
+                <ComboBox x:Name="ProductCategoryComboBox" Width="175"/>
+                <Button x:Name="EditCategoryButton" Width="25" Height="25"/>
+            </StackPanel>
+
+            <!-- Price -->
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Price"/>
+            <TextBox Grid.Row="3" Grid.Column="0" x:Name="ProductPriceBox" MinWidth="150" MaxWidth="300"/>
+
+            <!-- Supplier -->
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="Supplier"/>
+            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" Spacing="5">
+                <ComboBox x:Name="ProductSupplierComboBox" Width="175"/>
+                <Button x:Name="EditSupplierButton" Width="25" Height="25"/>
+            </StackPanel>
+
+            <!-- Discount Checkbox -->
+            <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" Spacing="10">
+                <TextBlock VerticalAlignment="Center" Text="Discount"/>
+                <CheckBox x:Name="DiscountCheckBox" 
+                          Checked="DiscountCheckBox_Checked" 
+                          Unchecked="DiscountCheckBox_Unchecked"/>
+            </StackPanel>
+
+            <!-- Max Stock -->
+            <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Vertical" Spacing="5">
+                <TextBlock Text="Max stock"/>
+                <NumericUpDown x:Name="MaxStockNumericUpDown" Width="150" FormatString="F0"/>
+            </StackPanel>
+
+            <!-- Discount Dates -->
+            <StackPanel x:Name="DiscountDatesPanel" Grid.Row="5" Grid.Column="0" Orientation="Horizontal" Spacing="50" IsVisible="False">
+                <StackPanel>
+                    <TextBlock Text="Start date"/>
+                    <DatePicker x:Name="StartDatePicker"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="End date"/>
+                    <DatePicker x:Name="EndDatePicker"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Description -->
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Description"/>
+            <TextBox Grid.Row="7" Grid.Column="0" x:Name="ProductDescriptionBox" TextWrapping="Wrap" AcceptsReturn="True" Height="100"/>
+
+            <!-- Status -->
+            <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" Spacing="10">
+                <TextBlock VerticalAlignment="Center" Text="Status"/>
+                <CheckBox x:Name="StatusCheckBox"/>
+            </StackPanel>
+
+            <!-- Buttons -->
+            <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal" Spacing="10" HorizontalAlignment="Right" Margin="0,10,0,0">
+                <Button x:Name="CancelButton" Click="CancelButtonHandler" Background="LightCoral" CornerRadius="25" Width="75" HorizontalAlignment="Center">Cancel</Button>
+                <Button x:Name="UpdateButton" Click="UpdateButtonHandler" Background="LightGreen" CornerRadius="25" Width="75" HorizontalAlignment="Center">Update</Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="550"
+             x:Class="PIM_Presentation.LogoutPage">
+    
+    <StackPanel VerticalAlignment="Center">
+    
+        <!-- Goodbye Text -->
+        <TextBlock x:Name="ActiveEmployeeTextBlock"
+                   FontSize="40"
+                   HorizontalAlignment="Center"
+                   FontFamily="Segoe UI"
+                   FontWeight="Bold"
+                   Foreground="#2C3E50"
+                   Margin="10,10,0,20"
+                   TextWrapping="Wrap">
+            Goodbye EmployeeName!
+        </TextBlock>
+        <!-- Goodbye Text -->
+    
+        <Button Width="200" Height="50" Content="Log Out" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="30"
+                Background="LightCoral"
+                CornerRadius="10"
+                Click="LogOutHandler"/>
+    
+    </StackPanel>
+    
+</UserControl>

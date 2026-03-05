@@ -1,0 +1,16 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PIM_Presentation.ConfirmWindow"
+        Width="300" Height="150"
+        WindowStartupLocation="CenterOwner"
+        Title="Confirm Action">
+  
+    <StackPanel Margin="20" Spacing="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Are you sure?" FontSize="18" HorizontalAlignment="Center"/>
+    
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20">
+            <Button Name="CancelButton" Content="Cancel" Background="LightCoral" CornerRadius="25" Width="80" HorizontalContentAlignment="Center" Click="Cancel_Click"/>
+            <Button Name="ConfirmButton" Content="Confirm" Background="lightgreen" CornerRadius="25" Width="80" HorizontalContentAlignment="Center" Click="Confirm_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

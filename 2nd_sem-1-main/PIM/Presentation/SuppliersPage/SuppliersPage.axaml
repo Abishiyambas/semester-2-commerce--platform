@@ -1,0 +1,50 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PIM_Presentation.SuppliersPage">
+  <StackPanel>
+              
+      <!-- Welcome Text -->
+      <TextBlock x:Name="ActiveEmployeeTextBlock"
+                 FontSize="25"
+                 HorizontalAlignment="Left"
+                 FontFamily="Segoe UI"
+                 FontWeight="Bold"
+                 Foreground="#2C3E50"
+                 Margin="10,10,0,0"
+                 TextWrapping="Wrap">
+          Welcome EmployeeName!
+      </TextBlock>
+      <!-- Welcome Text -->
+
+      <Grid Margin="25 25 25 0 " RowDefinitions="*" ColumnDefinitions="Auto Auto auto *" >
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Spacing="10">
+            <TextBox Name="SearchBox" Watermark="Search.." Width="250" VerticalContentAlignment="Center" KeyUp="SearchBox_KeyUp"></TextBox>
+            <Button Name="RefreshButton" Click="RefreshButtonHandler" Height="35" Width="35" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" Margin="0" Background="Transparent"></Button>
+        
+        </StackPanel>
+        
+        <Button Grid.Row="1" Grid.Column="1" Margin="25 0 0 0" CornerRadius="20" Click="AddSupplierButtonHandler" Background="LightSkyBlue"> Add Supplier</Button>
+        <Button Grid.Row="1" Grid.Column="3"  HorizontalAlignment="Right"> </Button>
+    </Grid>
+      
+      <Border  Margin="25 25 25 0" BorderBrush="Black" BorderThickness="1" CornerRadius="10 10 0 0">
+          
+              <Grid Margin="10" RowDefinitions="*" ColumnDefinitions="2* 2* 2* 1* " HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                  <TextBlock Grid.Row="0" Grid.Column="0">Supplier Name</TextBlock>
+                  <TextBlock Grid.Row="0" Grid.Column="1">Phone number</TextBlock>
+                  <TextBlock Grid.Row="0" Grid.Column="2">Edit</TextBlock>
+                  <TextBlock Grid.Row="0" Grid.Column="3">Delete</TextBlock>
+              </Grid>
+          </Border>
+      
+      <Border MaxHeight="450" Margin="25 0 25 50" BorderBrush="Black" BorderThickness="1 0 1 1" CornerRadius="0 0 10 10">
+          <ScrollViewer>
+              <Grid Name="SupplierGrid" Margin="10" ColumnDefinitions="2* 2* 2* 1*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Grid>
+          </ScrollViewer>
+          </Border>
+      
+      </StackPanel>
+</UserControl>

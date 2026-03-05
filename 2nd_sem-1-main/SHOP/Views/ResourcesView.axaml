@@ -1,0 +1,22 @@
+<UserControl
+    Height="1050"
+    Width="1400"
+    mc:Ignorable="d"
+    x:Class="SHOP.Views.ResourcesView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Border CornerRadius="25">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="50%, 100%" StartPoint="50%, 0%">
+                <GradientStop Color="#A8E6CF" Offset="0" />
+                <GradientStop Color="#46CDCF" Offset="0.5" />
+                <GradientStop Color="#3D84A8" Offset="1" />
+            </LinearGradientBrush>
+        </Border.Background>
+        <StackPanel>
+            <Label Margin="15 ">Welcome to the great knowledge of hardware, computers, and much more :)</Label>
+        </StackPanel>
+    </Border>
+</UserControl>

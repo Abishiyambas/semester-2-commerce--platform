@@ -1,0 +1,66 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:PIM_Presentation"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PIM_Presentation.MainTabControl"
+             x:DataType="local:MainTabControl">
+
+  <UserControl.Styles>
+    
+    <Style Selector="TabItem.h1">
+      <Setter Property="FontSize" Value="24"/>
+      <Setter Property="BorderBrush" Value="Black"/>
+      <Setter Property="BorderThickness" Value="0,0,0,1"/>
+      <Setter Property="HorizontalAlignment" Value="Stretch"/>
+      <Setter Property="CornerRadius" Value="5,20,0,0"/>
+      <Setter Property="Background" Value="LightSkyBlue"/>
+      <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
+    
+    <Style Selector="TabItem.h1:selected">
+      <Setter Property="Background" Value="RoyalBlue"/>
+    </Style>
+    
+  </UserControl.Styles>
+
+    <TabControl HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+      
+      <TabControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <UniformGrid Rows="1"/>
+        </ItemsPanelTemplate>
+      </TabControl.ItemsPanel>
+      
+      <TabItem Classes="h1" Header="Products">
+        <ContentControl Content="{Binding ProductsPage}" />
+      </TabItem>
+
+      <TabItem Classes="h1" Header="Categories">
+        <ContentControl Content="{Binding CategoriesPage}" />
+      </TabItem>
+
+      <TabItem Classes="h1" Header="Suppliers">
+        <ContentControl Content="{Binding SuppliersPage}" />
+      </TabItem>
+
+      <TabItem Classes="h1" Header="Employees">
+        <ContentControl Content="{Binding EmployeesPage}" />
+      </TabItem>
+      
+      <TabItem Classes="h1" Header="Discounts">
+        <ContentControl Content="{Binding DiscountsPage}"/>
+      </TabItem>
+
+      <TabItem Classes="h1" Header="Statistics">
+        <ContentControl Content="{Binding StatisticsPage}" />
+      </TabItem>
+
+      <TabItem Classes="h1" Header="Log Out">
+        <ContentControl Content="{Binding LogoutPage}" />
+      </TabItem>
+
+    </TabControl>
+
+</UserControl>

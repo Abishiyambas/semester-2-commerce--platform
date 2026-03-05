@@ -1,0 +1,48 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="400"
+        x:Class="PIM_Presentation.AddProductWindow"
+        Title="Add Product">
+
+  <Grid RowDefinitions="* * 2* *" ColumnDefinitions="1.25* *" Margin="25">
+    
+    <StackPanel Grid.Row="0" Grid.Column="0">
+      <TextBlock>Product name</TextBlock>
+      <TextBox Name="ProductNameBox" Watermark="Enter product name..."></TextBox>
+    </StackPanel>
+
+    <StackPanel Grid.Row="1" Grid.Column="0">
+      <TextBlock>Product price</TextBlock>
+      <TextBox Name="ProductPriceBox" Watermark="Enter product price..."></TextBox>
+    </StackPanel>
+
+    <Grid RowDefinitions="auto *" Grid.Row="2" Grid.RowSpan="2" Grid.Column="0"> <!--Is grid to allow for vertical stretch-->
+      <TextBlock Grid.Row="0">Product description</TextBlock>
+      <TextBox Grid.Row="1" Name="ProductDescriptionBox" Watermark="Enter product description..." TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBox>
+    </Grid>
+
+    <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center">
+      <TextBlock>Product category</TextBlock>
+      <ComboBox Name="ProductCategoryComboBox" Width="175" PlaceholderText="Select a category..."/>
+    </StackPanel>
+
+    <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+      <TextBlock>Product Supplier</TextBlock>
+      <ComboBox Name="ProductSupplierComboBox" Width="175" PlaceholderText="Select a supplier..."/>
+    </StackPanel>
+
+    <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
+      <TextBlock>Product max stock</TextBlock>
+      <NumericUpDown Name="MaxStockNumericUpDown" Width="175" Increment="1" FormatString="F0"></NumericUpDown>
+    </StackPanel>
+    
+    <StackPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal" Spacing="10">
+      <Button Name="CancelButton" Click="CancelButtonHandler" CornerRadius="25" Width="75" Background="LightCoral" HorizontalContentAlignment="Center">Cancel</Button>
+      <Button Name="DoneButton" Click="DoneButtonHandler" CornerRadius="25" Width="75" Background="lightgreen" HorizontalContentAlignment="Center">Done</Button>
+    </StackPanel>
+    
+  </Grid>
+
+</Window>

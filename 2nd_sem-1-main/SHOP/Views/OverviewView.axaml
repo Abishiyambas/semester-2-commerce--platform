@@ -1,0 +1,393 @@
+<UserControl
+    x:Class="SHOP.Views.OverviewView"
+    x:DataType="vm:OverviewViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:vm="clr-namespace:SHOP.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <StackPanel>
+        <Grid
+            ColumnDefinitions="*,*,*"
+            RowDefinitions="*,*"
+            ShowGridLines="False">
+            <Border
+                Background="LightGray"
+                CornerRadius="25"
+                Grid.Column="0"
+                Height="50"
+                Margin="20"
+                Width="50">
+                <Label
+                    Content="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
+            </Border>
+            <TextBlock
+                FontWeight="Bold"
+                Grid.Column="0"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                Text="Delivery" />
+            <Border
+                Background="LightGreen"
+                CornerRadius="25"
+                Grid.Column="1"
+                Height="50"
+                Margin="20"
+                Width="50">
+                <Label
+                    Content="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
+            </Border>
+            <TextBlock
+                Grid.Column="1"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                Text="Overview" />
+            <Border
+                Background="LightGray"
+                CornerRadius="25"
+                Grid.Column="2"
+                Height="50"
+                Margin="20"
+                Width="50">
+                <Label
+                    Content="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
+            </Border>
+            <TextBlock
+                Grid.Column="3"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                Text="Payment" />
+        </Grid>
+        <Grid
+            ColumnDefinitions="400,400"
+            HorizontalAlignment="Center"
+            Margin="20"
+            RowDefinitions="*,*,*">
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="25"
+                Grid.Column="0"
+                Padding="5">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="50%, 100%" StartPoint="50%, 0%">
+                        <GradientStop Color="#A8E6CF" Offset="0" />
+                        <GradientStop Color="#46CDCF" Offset="0.5" />
+                        <GradientStop Color="#3D84A8" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel Grid.Column="0">
+                    <TextBlock
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        Margin="0,20,0,20"
+                        Text="Billing Address" />
+                    <TextBlock FontWeight="Normal" Margin="0,0,0,10">
+                        <Run FontWeight="Bold" Text="Name: " />
+                        <Run FontWeight="Normal" Text="{Binding Name}" />
+                    </TextBlock>
+                    <TextBlock FontWeight="Normal" Margin="0,0,0,10">
+                        <Run FontWeight="Bold" Text="Address: " />
+                        <Run FontWeight="Normal" Text="{Binding Address}" />
+                    </TextBlock>
+                    <TextBlock FontWeight="Normal" Margin="0,0,0,10">
+                        <Run FontWeight="Bold" Text="Postal Code: " />
+                        <Run FontWeight="Normal" Text="{Binding PostalCode}" />
+                    </TextBlock>
+                    <TextBlock FontWeight="Normal" Margin="0,0,0,10">
+                        <Run FontWeight="Bold" Text="Town: " />
+                        <Run FontWeight="Normal" Text="{Binding City}" />
+                    </TextBlock>
+                    <TextBlock FontWeight="Normal" Margin="0,0,0,10">
+                        <Run FontWeight="Bold" Text="Country: " />
+                        <Run FontWeight="Normal" Text="{Binding Country}" />
+                    </TextBlock>
+                    <TextBlock FontWeight="Normal" Margin="0,0,0,10">
+                        <Run FontWeight="Bold" Text="Telephone: " />
+                        <Run FontWeight="Normal" Text="{Binding Telephone}" />
+                    </TextBlock>
+                    <TextBlock FontWeight="Normal" Margin="0,0,0,10">
+                        <Run FontWeight="Bold" Text="Email: " />
+                        <Run FontWeight="Normal" Text="{Binding Email}" />
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="25"
+                Grid.Column="1"
+                Margin="20,0,0,0"
+                Padding="5">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="50%, 100%" StartPoint="50%, 0%">
+                        <GradientStop Color=" #A8E6CF" Offset="0" />
+                        <GradientStop Color=" #46CDCF" Offset="0.5" />
+                        <GradientStop Color=" #3D84A8" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel Grid.Column="1">
+                    <TextBlock
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        Margin="0,20,0,20"
+                        Text="Your order" />
+                    <ItemsControl ItemsSource="{Binding CartItemList}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="1" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border
+                                    BorderThickness="0"
+                                    CornerRadius="25"
+                                    Margin="0,20,0,0"
+                                    Padding="5">
+                                    <StackPanel>
+                                        <Grid ColumnDefinitions="*,*">
+                                            <Image
+                                                Grid.Column="0"
+                                                Height="50"
+                                                HorizontalAlignment="Left"
+                                                Source="{Binding Products.ProductImage}"
+                                                Stretch="UniformToFill"
+                                                Width="50">
+                                                <Image.Clip>
+                                                    <!--  This makes it so our pictures have rounded edges in checkout view  -->
+                                                    <RectangleGeometry
+                                                        RadiusX="10"
+                                                        RadiusY="10"
+                                                        Rect="0,0,50,50" />
+                                                </Image.Clip>
+                                            </Image>
+
+                                            <TextBlock
+                                                FontSize="16"
+                                                FontWeight="Bold"
+                                                Foreground="Black"
+                                                Grid.Column="1"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Center">
+                                                <Run Text="{Binding Products.Name}" />
+                                                <LineBreak />
+                                                <Run
+                                                    FontWeight="ExtraLight"
+                                                    Foreground="Gray"
+                                                    Text="EAN: " />
+                                                <Run
+                                                    FontWeight="ExtraLight"
+                                                    Foreground="Gray"
+                                                    Text="{Binding Products.EAN_Number}" />
+                                            </TextBlock>
+                                        </Grid>
+                                        <TextBlock HorizontalAlignment="Right" Text="{Binding Count}" />
+                                        <TextBlock HorizontalAlignment="Right" Text="{Binding Products.Price, StringFormat='{}{0:F2} dkk.'}" />
+
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <Border
+                        Background="Black"
+                        Height="1"
+                        Margin="0,10" />
+                    <Grid ColumnDefinitions="*,*">
+                        <TextBlock
+                            FontWeight="Heavy"
+                            Grid.Column="0"
+                            Text="Subtotal" />
+                        <TextBlock
+                            FontWeight="Bold"
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            Text="{Binding TotalPrice, StringFormat='{}{0:F2} dkk.'}" />
+                    </Grid>
+                    <Border
+                        Background="Black"
+                        Height="1"
+                        Margin="0,10" />
+                    <Grid ColumnDefinitions="*,*">
+                        <TextBlock
+                            FontWeight="Light"
+                            Grid.Column="0"
+                            Text="Delivery" />
+                        <TextBlock
+                            FontWeight="Light"
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            Text="{Binding DeliveryPrice, StringFormat='{}{0:F2} dkk.'}" />
+                    </Grid>
+                    <Border
+                        Background="Black"
+                        Height="1"
+                        Margin="0,10" />
+                    <Grid ColumnDefinitions="*,*">
+                        <TextBlock
+                            FontWeight="Light"
+                            Grid.Column="0"
+                            Text="Total Price" />
+                        <TextBlock
+                            FontWeight="Light"
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            Text="{Binding PriceWithDelivery, StringFormat='{}{0:F2} dkk.'}" />
+                    </Grid>
+                    <Grid ColumnDefinitions="*,*">
+                        <TextBlock
+                            FontWeight="ExtraLight"
+                            Foreground="DarkSlateGray"
+                            Grid.Column="0"
+                            Text="Total (VAT)" />
+                        <TextBlock
+                            FontWeight="ExtraLight"
+                            Foreground="DarkSlateGray"
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            Text="{Binding VatPrice, StringFormat='{}{0:F2} dkk.'}" />
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="25"
+                Grid.Row="1"
+                Margin="0,20,0,0"
+                Padding="5">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="50%, 100%" StartPoint="50%, 0%">
+                        <GradientStop Color="#A8E6CF" Offset="0" />
+                        <GradientStop Color="#46CDCF" Offset="0.5" />
+                        <GradientStop Color="#3D84A8" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel>
+                    <TextBlock
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        Margin="0,20,0,0"
+                        Text="Payment form" />
+
+                    <RadioButton Name="CardPaymentButton">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="192" />
+                                <!--  Luft  -->
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="Card Payment" />
+                        </Grid>
+                    </RadioButton>
+                    <RadioButton Name="MobilePayButton">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="150" />
+                                <!--  Luft  -->
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="MobilPay" />
+                        </Grid>
+                    </RadioButton>
+                    <Label
+                        Content=""
+                        Foreground="DarkRed"
+                        Name="RadioButtonIsNotChecked" />
+                </StackPanel>
+            </Border>
+            <!--  "Acceptere betingelserne" knap, der SKAL markeres før det virker  -->
+            <!--  Hvis man trykker videre i systemet, og denne knap ikke er markeret, skal den komme op med en advarsel  -->
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="25"
+                Grid.Column="1"
+                Grid.Row="1"
+                Margin="20,20,0,20"
+                Padding="5">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="50%, 100%" StartPoint="50%, 0%">
+                        <GradientStop Color="#A8E6CF" Offset="0" />
+                        <GradientStop Color="#46CDCF" Offset="0.5" />
+                        <GradientStop Color="#3D84A8" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel>
+                    <TextBlock
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        Margin="0,20,0,0"
+                        Text="Accept terms" />
+                    <StackPanel Margin="10,10,0,0" Orientation="Horizontal">
+                        <Grid
+                            ColumnDefinitions="*,*"
+                            RowDefinitions="Auto,Auto"
+                            ShowGridLines="False">
+                            <CheckBox
+                                Checked="AcceptTermsBox_OnChecked"
+                                Grid.Column="0"
+                                Margin="0,0,0,0"
+                                Name="AcceptTermsBox"
+                                Unchecked="AcceptTermsBox_OnUnchecked"
+                                VerticalAlignment="Center" />
+                            <TextBlock
+                                Grid.Column="1"
+                                Text="I accept the terms and conditions"
+                                TextWrapping="Wrap"
+                                VerticalAlignment="Center"
+                                Width="320" />
+                            <Label
+                                Content=""
+                                Foreground="DarkRed"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Grid.Row="1"
+                                Name="AcceptTermsErrorLabel" />
+                        </Grid>
+                    </StackPanel>
+                    <!--  Knappen skal gå videre to betalingen (bare GUI delen) alt efter hvilken betaling kunden har valgt  -->
+                    <Button
+                        Click="Button_OnClick"
+                        Content="Go To Payment"
+                        Foreground="White"
+                        Height="41.66"
+                        HorizontalAlignment="Right"
+                        Margin="20"
+                        VerticalAlignment="Center"
+                        Width="150">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="100%, 50%" StartPoint="0%, 50%">
+                                <GradientStop Color="MediumSeaGreen" Offset="0" />
+                                <GradientStop Color="SeaGreen" Offset="0.5" />
+                                <GradientStop Color="ForestGreen" Offset="1" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="50">
+                                    <ContentPresenter
+                                        Content="{TemplateBinding Content}"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </StackPanel>
+</UserControl>

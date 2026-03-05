@@ -1,0 +1,96 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="1000"
+        x:Class="PIM_Presentation.LogInPage"
+        >
+
+  <UserControl.Styles>
+    <Style Selector="TextBlock.h1">
+      <Setter Property="FontSize" Value="52"/>
+    </Style>
+  </UserControl.Styles>
+
+  <UserControl.Styles>
+    <Style Selector="TextBlock.h2">
+      <Setter Property="FontSize" Value="16"/>
+      <Setter Property="LineSpacing" Value="8"/>
+    </Style>
+  </UserControl.Styles>
+
+  <UserControl.Styles>
+    <Style Selector="CheckBox.h2">
+      <Setter Property="FontSize" Value="16"/>
+    </Style>
+  </UserControl.Styles>
+
+  <UserControl.Styles>
+    <Style Selector="Button.h2">
+      <Setter Property="FontSize" Value="16"/>
+    </Style>
+  </UserControl.Styles>
+
+  <UserControl.Styles>
+    <Style Selector="TextBlock.link">
+      <Setter Property="FontSize" Value="12"/>
+      <Setter Property="Foreground" Value="blue"/>
+      <Setter Property="FontStyle" Value="Italic"/>
+    </Style>
+  </UserControl.Styles>
+
+  <UserControl.Styles>
+    <Style Selector="TextBox.textField">
+      <Setter Property="Height" Value="40"/>
+      <Setter Property="Width" Value="350"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+  </UserControl.Styles>
+
+
+  <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="10">
+    <StackPanel Margin="50" HorizontalAlignment="Center" VerticalAlignment="Center" >
+        
+      <TextBlock Classes="h1" Margin="0 0 0 30">
+        Log in
+      </TextBlock>
+
+      <!--ID FIELD-->
+      <StackPanel Margin="0 0 0 20">
+        <TextBlock Classes="h2">
+          Employee ID
+        </TextBlock>
+        <TextBox Name="IdTextBox" Classes="textField" HorizontalAlignment="Left">1</TextBox>
+      </StackPanel>
+      <!--ID FIELD-->
+
+      <!--PASSWORD FIELD-->
+      <StackPanel Margin="0 0 0 20">
+        <Grid ColumnDefinitions="* *" >
+          <TextBlock Classes="h2" Grid.Column="0" VerticalAlignment="Bottom" >
+            Password
+          </TextBlock>
+          <CheckBox Name="ShowPasswordCheckBox" Classes="h2" Click="ShowPasswordHandler" Grid.Column="1" HorizontalAlignment="Right">
+            Show
+          </CheckBox>
+        </Grid>
+        <TextBox Name="PasswordTextBox" Classes="textField" HorizontalAlignment="Left" PasswordChar="*">password</TextBox>
+      </StackPanel>
+      <!--PASSWORD FIELD-->
+
+      <!--REMEMBER ME BOX... maybe remove?-->
+      <CheckBox Name="RememberMeCheckBox" Classes="h2" Margin="0 0 0 20">
+        Remember me
+      </CheckBox>
+      <!--REMEMBER ME BOX-->
+
+      <!--LOG IN BUTTON-->
+      <Button Classes="h2" Click="LogInHandler" CornerRadius="20" Padding="30 10 30 10" Margin="0 0 0 20" Background="LightSkyBlue">
+        Log in
+      </Button>
+      <!--LOG IN BUTTON-->
+        
+    </StackPanel>
+  </Border>
+  
+</UserControl>

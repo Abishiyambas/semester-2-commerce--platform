@@ -1,0 +1,165 @@
+﻿<UserControl
+    Height="1050"
+    Width="1400"
+    x:Class="SHOP.Views.RegisterUserView"
+    x:DataType="vm:RegisterUserViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:vm="clr-namespace:SHOP.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <StackPanel>
+    
+        <Border CornerRadius="20">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="50%, 100%" StartPoint="50%, 0%">
+                    <GradientStop Color="#A8E6CF" Offset="0" />
+                    <GradientStop Color="#46CDCF" Offset="0.5" />
+                    <GradientStop Color="#3D84A8" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel>
+                <Label
+                    FontSize="35"
+                    FontWeight="DemiBold"
+                    HorizontalAlignment="Center"
+                    Margin="0,20,0,0"
+                    Content="Register user"/>
+                <TabControl>
+                    <TabItem Header="Private customer">
+
+                        <StackPanel>
+                            <Label Content="Private customer" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Center" />
+                            <Grid
+                                ColumnDefinitions="*,*,*"
+                                Margin="0,0,0,25"
+                                RowDefinitions="*,*,*,*,*,*,*,*,*,*,*"
+                                ShowGridLines="False">
+
+                                <Border CornerRadius="7" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Padding="1" Width="305">
+                                    <TextBox Name="name" CornerRadius="7" Watermark="Name" FontSize="16" GotFocus="ClearOnFocus" />
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Padding="1" Width="305">
+                                    <TextBox Name="Address" CornerRadius="7" Watermark="Address" FontSize="16" GotFocus="ClearOnFocus" />
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Padding="1" Width="305">
+                                    <TextBox Name="PostalCode" CornerRadius="7" Watermark="Postal code" FontSize="16" GotFocus="ClearOnFocus" />
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Padding="1" Width="305">
+                                    <TextBox Name="City" CornerRadius="7" Watermark="City" FontSize="16" GotFocus="ClearOnFocus" />
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" Padding="1" Width="305">
+                                    <ComboBox Name="Country" SelectedIndex="0" FontSize="16">
+                                        <ComboBoxItem>Choose country</ComboBoxItem>
+                                        <ComboBoxItem>Denmark</ComboBoxItem>
+                                        <ComboBoxItem>England</ComboBoxItem>
+                                        <ComboBoxItem>Germany</ComboBoxItem>
+                                    </ComboBox>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" Padding="1" Width="305">
+                                    <TextBox Name="Telephone" CornerRadius="7" Watermark="Phone number" FontSize="16" GotFocus="ClearOnFocus"  />
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" Padding="1" Width="305">
+                                    <TextBox Name="Email" CornerRadius="7" Watermark="Email" FontSize="16" GotFocus="ClearOnFocus" />
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Center" Padding="1" Width="305">
+                                    <TextBox Name="ConfirmE" CornerRadius="7" Watermark="Confirm email" FontSize="16" GotFocus="ClearOnFocus" />
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" Padding="1" Width="305">
+                                    <TextBox Name="Password" CornerRadius="7" Watermark="Password" FontSize="16" GotFocus="ClearOnFocus" PasswordChar="*"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Center" Padding="1" Width="305">
+                                    <TextBox Name="ConfirmP" CornerRadius="7" Watermark="Confirm password" FontSize="16" GotFocus="ClearOnFocus" PasswordChar="*"/>
+                                </Border>
+
+                                <Border Grid.Column="1" Grid.Row="10" HorizontalAlignment="Center">
+                                    <Button Click="Register_OnClick" Name="Register" Content="Register user" FontSize="20" />
+                                </Border>
+                                
+                                <Border Grid.Column="2" >
+                                    <Label Name="RegisterLabel" Content="" FontStyle="Italic" FontSize="20" FontWeight="DemiBold"></Label>
+                                </Border>
+                                
+                            </Grid>
+                        </StackPanel>
+                    
+                    </TabItem>
+
+                    <TabItem Header="Business customer">    
+                        <StackPanel>
+                            <Label Content="Business customer" FontSize="20" FontWeight="DemiBold" />
+                            <Grid
+                                ColumnDefinitions="*,*"
+                                RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*"
+                                ShowGridLines="False">
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="CvrNumber" CornerRadius="7" Watermark="CVR Number" FontSize="16"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="CompanyName" CornerRadius="7" Watermark="Company Name" FontSize="16"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="ContactPerson" CornerRadius="7" Watermark="Contact person" FontSize="16"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="BusinessAddress" CornerRadius="7" Watermark="Address" FontSize="16"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="BusinessZip" CornerRadius="7" Watermark="Zip code" FontSize="16"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="BusinessCity" CornerRadius="7" Watermark="City" FontSize="16"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <ComboBox Name="BusinessCountry" SelectedIndex="0" FontSize="16">
+                                        <ComboBoxItem>Choose country</ComboBoxItem>
+                                        <ComboBoxItem>Denmark</ComboBoxItem>
+                                        <ComboBoxItem>England</ComboBoxItem>
+                                        <ComboBoxItem>Germany</ComboBoxItem>
+                                    </ComboBox>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="BusinessPhone" CornerRadius="7" Watermark="Phone number" FontSize="16"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="BusinessEmail" CornerRadius="7" Watermark="Email" FontSize="16"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="ConfirmBusinessEmail" CornerRadius="7" Watermark="Confirm Email" FontSize="16"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="10" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="BusinessPassword" CornerRadius="7" Watermark="Password" FontSize="16"/>
+                                </Border>
+
+                                <Border CornerRadius="7" Grid.Column="0" Grid.Row="11" HorizontalAlignment="Left" Padding="10" Width="305">
+                                    <TextBox Name="ConfirmBusinessPassword" CornerRadius="7" Watermark="Confirm password" FontSize="16"/>
+                                </Border>
+                            </Grid>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+                
+            </StackPanel>
+        
+        </Border>
+    </StackPanel>
+</UserControl>

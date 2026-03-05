@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Width="500" Height="350"
+             CanResize="False"
+             WindowStartupLocation="CenterOwner"
+             Title="Order Items"
+             x:Class="PIM_Presentation.StockOrderPopup">
+        <Border Padding="10" CornerRadius="10" BorderBrush="Black" BorderThickness="1">
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+                
+                <!-- Max Amount -->
+                <TextBlock Text="Max Amount" Grid.Row="0" Grid.Column="0" Margin="5"/>
+                <TextBox x:Name="MaxAmountBox" Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Center" IsReadOnly="True"/>
+
+                <!-- Order Amount -->
+                <TextBlock Text="Order Amount" Grid.Row="0" Grid.Column="1" Margin="5"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="5">
+                    <TextBox x:Name="OrderAmountBox" Width="60"/>
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <Button x:Name="IncreaseButton" Content="▲" Width="20" Height="20" Background="LightGreen"/>
+                        <Button x:Name="DecreaseButton" Content="▼" Width="20" Height="20" Background="LightCoral"/>
+                    </StackPanel>
+                    <Button x:Name="MaxButton" Content="Max" Margin="10,0,0,0" Background="LightGreen"/>
+                </StackPanel>
+
+                <!-- Current Amount -->
+                <TextBlock Text="Current amount" Grid.Row="2" Grid.Column="0" Margin="5"/>
+                <TextBox x:Name="CurrentAmountBox" Grid.Row="3" Grid.Column="0" Margin="5" VerticalAlignment="Center" IsReadOnly="True"/>
+
+                <!-- Amount after ordering -->
+                <TextBlock Text="Amount after ordering" Grid.Row="2" Grid.Column="1" Margin="5"/>
+                <TextBox x:Name="AfterAmountBox" Grid.Row="3" Grid.Column="1" Margin="5" IsReadOnly="True"/>
+
+                <!-- Buttons -->
+                <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Button x:Name="CancelButton" Content="Cancel" Background="LightCoral" Margin="10" CornerRadius="25"  Width="75" HorizontalContentAlignment="Center"/>
+                    <Button x:Name="ConfirmButton" Content="Confirm" Background="LightGreen" Margin="10" CornerRadius="25" Width="75" HorizontalContentAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+</Window>

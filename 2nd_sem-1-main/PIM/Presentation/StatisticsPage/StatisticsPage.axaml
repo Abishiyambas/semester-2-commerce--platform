@@ -1,0 +1,62 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ScottPlot="clr-namespace:ScottPlot.Avalonia;assembly=ScottPlot.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PIM_Presentation.StatisticsPage"
+             x:DataType="x:Object">
+  
+    <StackPanel>
+      <!-- Welcome Text -->
+      <TextBlock x:Name="ActiveEmployeeTextBlock"
+                 FontSize="25"
+                 HorizontalAlignment="Left"
+                 FontFamily="Segoe UI"
+                 FontWeight="Bold"
+                 Foreground="#2C3E50"
+                 Margin="10,10,0,0"
+                 TextWrapping="Wrap">
+        Welcome EmployeeName!
+      </TextBlock>
+      <!-- Welcome Text -->
+        <!-- Window Grid -->
+        <Grid ShowGridLines="False" RowDefinitions="60 70 6*" ColumnDefinitions="800 400">
+            <!-- Top Grid -->
+            <Grid Grid.Column="0" Grid.Row="0" ShowGridLines="False" Margin="25 25 25 0" RowDefinitions="*" ColumnDefinitions="auto auto auto *">
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Spacing="10">
+                    <TextBox Name="SearchBox" KeyUp="SearchBox_KeyUp" Watermark="Search..." Height="35" Width="250" VerticalContentAlignment="Center"></TextBox>
+                    <Button Name="RefreshButton" Click="RefreshButtonHandler" Height="35" Width="35" Padding="0" Margin="0" Background="Transparent" ToolTip.Tip="Reload product statistics" ></Button>
+                </StackPanel>
+            </Grid>
+          
+            <!-- Product Grid -->
+            <Border Grid.Column="0" Grid.Row="1" Margin="25, 25, 25, 0" BorderBrush="Black" BorderThickness="1" CornerRadius="10 10 0 0">
+                <Grid ShowGridLines="False" Margin="10" RowDefinitions="*" ColumnDefinitions="8* 5* 6* 6*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <!-- Header row -->
+                    <TextBlock Grid.Row="0" Grid.Column="0">Name</TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="1">Price</TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="2">Gennemsnits Rating</TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="3">Active</TextBlock>
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="0" Grid.Row="2" MaxHeight="450" Margin="25 0 25 50" BorderBrush="Black" BorderThickness="1 0 1 1" CornerRadius="0 0 10 10">
+                <ScrollViewer>
+                    <!-- Product Grid (Dynamic Content) -->
+                    <Grid Name="ProductGrid" Margin="10" ColumnDefinitions="8* 5* 6* 6*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <!-- Dynamic rows will be added here in your code-behind -->
+                    </Grid>
+                </ScrollViewer>
+            </Border>
+        
+             <!-- Pie Chart Section -->
+             <Grid ShowGridLines="False" Grid.Column="1" Grid.Row="0">
+                 <Label Name="ProductNameLabel" Grid.Row="0" Grid.Column="0" FontSize="20" Margin="25,15,0,0"></Label>
+             </Grid>
+             <TextBlock Grid.Column="1" Grid.Row="0" Margin="25,10,0,10" FontSize="18" ToolTip.Tip="Pie chart showing number of products per category" >Product Categories</TextBlock>
+             <ScottPlot:AvaPlot Grid.Row="2" Grid.Column="1" Name="Categories"/>
+        </Grid>
+
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,140 @@
+<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="SHOP.Views.PaymentMobilePayView"
+    x:DataType="vm:PaymentMobilePayViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:SHOP.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <StackPanel>
+        <Grid
+            ColumnDefinitions="*,*,*"
+            RowDefinitions="*,*"
+            ShowGridLines="False">
+            <Border
+                Background="LightGray"
+                CornerRadius="25"
+                Grid.Column="0"
+                Height="50"
+                Margin="20"
+                Width="50">
+                <Label
+                    Content="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
+            </Border>
+            <TextBlock
+                FontWeight="Bold"
+                Grid.Column="0"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                Text="Delivery" />
+            <Border
+                Background="LightGray"
+                CornerRadius="25"
+                Grid.Column="1"
+                Height="50"
+                Margin="20"
+                Width="50">
+                <Label
+                    Content="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
+            </Border>
+            <TextBlock
+                Grid.Column="1"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                Text="Overview" />
+            <Border
+                Background="LightGreen"
+                CornerRadius="25"
+                Grid.Column="2"
+                Height="50"
+                Margin="20"
+                Width="50">
+                <Label
+                    Content="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
+            </Border>
+            <TextBlock
+                Grid.Column="3"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                Text="Payment" />
+        </Grid>
+        <Border
+            BorderBrush="Gray"
+            BorderThickness="1"
+            CornerRadius="25"
+            Height="400"
+            Margin="0,20,0,0"
+            Padding="5"
+            Width="400">
+            <StackPanel>
+                <Image
+                    Height="50"
+                    HorizontalAlignment="Center"
+                    Source="../Assets/arneIconforTaskbar.png"
+                    Width="50" />
+                <TextBlock
+                    FontWeight="ExtraBold"
+                    HorizontalAlignment="Center"
+                    Text="www.SHOP.dk" />
+                <TextBlock
+                    FontWeight="ExtraLight"
+                    Foreground="Gray"
+                    HorizontalAlignment="Center"
+                    Text="AE ApS" />
+                <TextBlock
+                    FontSize="30"
+                    FontWeight="ExtraLight"
+                    HorizontalAlignment="Center"
+                    Text="{Binding Price, StringFormat='{}{0:F2} DKK'}" />
+                <Grid
+                    ColumnDefinitions="120,150,100"
+                    RowDefinitions="*,*"
+                    ShowGridLines="False">
+                    <TextBlock
+                        FontSize="15"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        HorizontalAlignment="Right"
+                        Text="+45"
+                        VerticalAlignment="Center" />
+                    <TextBox
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        HorizontalAlignment="Left"
+                        Watermark="Telephone number"
+                        Width="150"
+                        x:Name="TelephoneNumberTextBox" />
+                    <TextBlock
+                        Foreground="DarkRed"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        MaxWidth="150"
+                        Name="TelephoneNumberLabel"
+                        Text=""
+                        TextWrapping="Wrap" />
+                </Grid>
+                <CheckBox Content="Remember my number" HorizontalAlignment="Center" />
+                <Button
+                    Click="ConfirmButton_OnClick"
+                    Content="Confirm"
+                    Foreground="White"
+                    Height="41.66"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    Name="ConfirmButton"
+                    VerticalContentAlignment="Center"
+                    Width="150" />
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
+using System.IO;
+using Avalonia.Controls;
+using Avalonia.Interactivity;
+using Avalonia.Platform.Storage;
+
+namespace DAM.Views.CRUD;
+
+public partial class Read : Window {
+    public Read() {
+        InitializeComponent();
+        Width = 540;
+        Height = 360;
+    }
+    
+    private async void Button_GetFile(object? sender, RoutedEventArgs e)
+    {
+        List<string> imageData = new();
+        try
+        {
+            Uri path;
+            var topLevel = GetTopLevel(this);
+            var files = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
+            {
+                Title = "Select File",
+                AllowMultiple = false
+            });
+            
+            path = files[0].Path;
+            string subPath = path.ToString();
+
+            PathBox.Text = subPath.Substring(subPath.LastIndexOf(':') + 3);
+            
+            if (PathBox.Text != null)
+            {
+                imageData = MainWindow._databaseConnection.GetFileData(PathBox.Text.Substring(PathBox.Text.LastIndexOf('/') + 1));
+            }
+            
+            UuidBox.Text = imageData[0];
+            NameBox.Text = imageData[1];
+            TypeBox.Text = imageData[2];
+            UploadBox.Text = imageData[3];
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            //throw new NoNullAllowedException("Need a valid file path"); // TODO unit test
+            // TODO need proper error handling
+        }
+        // fetch table information on image and display in textboxes
+    }
+
+    private void Button_ViewFile(object? sender, RoutedEventArgs e)
+    {
+        try
+        {
+            string openPath;
+            if (PathBox.Text != null)
+            {
+                openPath = PathBox.Text;
+                
+                Process.Start(new ProcessStartInfo()
+                {
+                    FileName = openPath,
+                    UseShellExecute = true
+                });
+            }
+
+            
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

@@ -1,0 +1,61 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="350" Height="550"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"             
+        x:Class="PIM_Presentation.EditEmployeeWindow"
+        Title="Edit Employee">
+     
+    <StackPanel Margin="50" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="15">
+    
+        <!-- Employee full name -->
+        <StackPanel Spacing="5">
+            <TextBlock>Employee Name</TextBlock>
+            <TextBox Name="EmployeeNameBox" Width="200" Watermark="Enter employee's name..." HorizontalContentAlignment="Left"/>
+        </StackPanel>
+            
+        <!-- Old Password -->
+        <StackPanel Spacing="5">
+            <Grid ColumnDefinitions="* *">
+                <TextBlock Grid.Column="0" VerticalAlignment="Bottom">Old Password</TextBlock>
+                <CheckBox Name="ShowOldPasswordCheckBox" Click="ShowOldPasswordHandler" Grid.Column="2" HorizontalAlignment="Right">Show</CheckBox>
+            </Grid>
+            <TextBox Name="OldPasswordTextBox" Width="200" HorizontalAlignment="Left" PasswordChar="*" Watermark="Enter old password"/>
+        </StackPanel>  
+        
+        <!-- New Password -->
+        <StackPanel Spacing="5">
+            <Grid ColumnDefinitions="* *">
+                <TextBlock Grid.Column="0" VerticalAlignment="Bottom">New Password</TextBlock>
+                <CheckBox Name="ShowNewPasswordCheckBox" Click="ShowNewPasswordHandler" Grid.Column="2" HorizontalAlignment="Right">Show</CheckBox>
+            </Grid>
+            <TextBox Name="NewPasswordTextBox" Width="200" HorizontalAlignment="Left" PasswordChar="*" Watermark="Enter new password"/>
+        </StackPanel>  
+        
+        <!-- Confirm Password -->
+        <StackPanel Spacing="5">
+            <Grid ColumnDefinitions="* *">
+                <TextBlock Grid.Column="0" VerticalAlignment="Bottom">Confirm password</TextBlock>
+                <CheckBox Name="ShowConfirmNewPasswordCheckBox" Click="ShowConfirmNewPasswordHandler" Grid.Column="2" HorizontalAlignment="Right">Show</CheckBox>
+            </Grid>
+            <TextBox Name="ConfirmNewPasswordTextBox" Width="200" HorizontalAlignment="Left" PasswordChar="*" Watermark="Re-enter new password"/>
+        </StackPanel>  
+        
+        <!-- Authorization CheckBox -->
+        <StackPanel Spacing="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock VerticalAlignment="Center">Authorize Employee?</TextBlock>
+            <CheckBox Name="AuthorizedCheckBox" IsChecked="False" Margin="10,0,0,0"/>
+        </StackPanel>
+        
+        <!-- Status Text -->
+        <TextBlock x:Name="StatusTextBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
+        
+        <!-- Confirmation -->
+        <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button Name="CancelButton" Click="CancelButtonHandler" CornerRadius="25" Width="75" Background="LightCoral" HorizontalContentAlignment="Center">Cancel</Button>
+            <Button Name="DoneButton" Click="DoneButtonHandler" CornerRadius="25" Width="75" Background="LightGreen" HorizontalContentAlignment="Center">Confirm</Button>
+        </StackPanel>
+        
+    </StackPanel>
+    
+</Window>

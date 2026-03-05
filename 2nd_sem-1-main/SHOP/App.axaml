@@ -1,0 +1,48 @@
+<Application
+    RequestedThemeVariant="Light"
+    x:Class="SHOP.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:classes="clr-namespace:SHOP.Classes"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
+    <Application.DataTemplates>
+        <classes:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+        <Style Selector="Button">
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="FontStyle" Value="Italic" />
+            <Setter Property="CornerRadius" Value="17.5" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="100%,50%" StartPoint="0%,50%">
+                        <GradientStop Color="SeaGreen" Offset="0.1" />
+                        <GradientStop Color="MediumSeaGreen" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style Selector="TextBlock">
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="FontStyle" Value="Normal" />
+        </Style>
+
+        <Style Selector="TabItem">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+        </Style>
+
+        <Style Selector="TabItem:checked">
+            <Setter Property="Background" Value="#00ACC1" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+    </Application.Styles>
+</Application>

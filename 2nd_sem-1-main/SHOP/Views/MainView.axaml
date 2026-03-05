@@ -1,0 +1,319 @@
+<Window
+    Background="Azure"
+    Icon="avares://SHOP/Assets/ProgramLogo.png"
+    Title="arneselectronics"
+    d:DesignHeight="1050"
+    d:DesignWidth="1400"
+    mc:Ignorable="d"
+    x:Class="SHOP.MainView"
+    x:DataType="vm:MainViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:SHOP.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--  Design-time DataContext for previewing  -->
+    <Design.DataContext>
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <ScrollViewer>
+        <StackPanel >
+            <Grid
+                ColumnDefinitions="*,*,400,*,*"
+                Height="115"
+                Margin="0"
+                
+                ShowGridLines="False" Background="#A8E6CF">
+                <!--  Logo Button  -->
+                <Button
+                    Background="Transparent"
+                    Command="{Binding GoToHomeCommand}"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    BorderBrush="Transparent"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="250">
+                    <Image Source="avares://SHOP/Assets/ArnesLogoBorder.png" 
+                           RenderOptions.BitmapInterpolationMode="MediumQuality"/>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                CornerRadius="50">
+                                <ContentPresenter
+                                    Content="{TemplateBinding Content}"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <!--  Search Box  -->
+                <Border
+                    Background="White"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="25"
+                    Grid.Column="2"
+                    Height="50">
+                    <Grid>
+                        <TextBox
+                            Background="Transparent"
+                            BorderThickness="0"
+                            CornerRadius="25"
+                            FontSize="20"
+                            Foreground="Black"
+                            Height="50"
+                            HorizontalAlignment="Stretch"
+                            Name="SearchBox"
+                            TextAlignment="Left"
+                            VerticalAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Watermark="Search" />
+                        <Button
+                            Click="searchProducts"
+                            Command="{Binding GoToFilteredSearchCommand}"
+                            HorizontalAlignment="Right"
+                            Margin="2.5"
+                            Background="White">
+                                <Image
+                                    Source="avares://SHOP/Assets/search.png" Stretch="Uniform" 
+                                    RenderOptions.BitmapInterpolationMode="HighQuality"
+                                />   
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border>
+                                        <ContentPresenter
+                                            Content="{TemplateBinding Content}"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                    </Grid>
+
+                </Border>
+
+
+
+                <Grid
+    ColumnDefinitions="10,*"
+    Grid.Column="3"
+    ShowGridLines="False">
+
+    <!-- Help Button -->
+    <Button
+        Background="Transparent"
+        Command="{Binding GoToHelpCommand}"
+        Grid.Column="1"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center">
+        <Image Source="avares://SHOP/Assets/HelpBlue.png"
+               RenderOptions.BitmapInterpolationMode="MediumQuality"
+               Height="35"
+               />
+        <Button.Template>
+            <ControlTemplate TargetType="Button">
+                <Border
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    CornerRadius="20"> <!-- matched radius -->
+                    <ContentPresenter
+                        Content="{TemplateBinding Content}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                </Border>
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+
+    <!-- Login Button -->
+    <Button
+        VerticalAlignment="Center"
+        Background="Transparent"
+        Command="{Binding GoToLogInCommand}"
+        Grid.Column="1"
+        HorizontalAlignment="Right"
+        IsVisible="{Binding !UserLoggedIn}"
+        Name="LoginButton">
+        <Image Source="avares://SHOP/Assets/loginLogoBlue.png" 
+               RenderOptions.BitmapInterpolationMode="MediumQuality"
+               Height="35"/>
+        <Button.Template>
+            <ControlTemplate TargetType="Button">
+                <Border
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    CornerRadius="20"> <!-- matched radius -->
+                    <ContentPresenter
+                        Content="{TemplateBinding Content}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                </Border>
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+                    <Border
+                        BorderBrush="#3D84A8"
+                        BorderThickness="1"
+                        Background="#A8E6CF"
+                        CornerRadius="15"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        Height="60"
+                        IsVisible="{Binding UserLoggedIn}"
+                        Width="110">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <Label
+                                Content="Logged in as:"
+                                FontSize="15"
+                                FontWeight="UltraBlack"
+                                Foreground="#46CDCF"
+                                HorizontalAlignment="Center" />
+                            <Label
+                                Content="{Binding LoggedInUsername}"
+                                FontSize="15"
+                                FontStyle="Italic"
+                                FontWeight="UltraBlack"
+                                Foreground="#46CDCF"
+                                HorizontalAlignment="Center"
+                                Name="UserNameLabel" />
+                        </StackPanel>
+                    </Border>
+
+
+
+
+                </Grid>
+
+                <StackPanel
+                    Grid.Column="4"
+                    Grid.Row="0"
+                    Margin="10"
+                    VerticalAlignment="Center">
+                    <!--  Cart Button  -->
+                    <Button
+                        Background="Transparent"
+                        Command="{Binding GoToCartCommand}"
+                        HorizontalAlignment="Center"
+                        >
+                        <StackPanel>
+                            <Grid ColumnDefinitions="*,*">
+                                <Image
+                                    Grid.Column="0"
+                                    HorizontalAlignment="Left"
+                                    Source="avares://SHOP/Assets/cart-removebg-preview(1).png" Height="55" 
+                                    RenderOptions.BitmapInterpolationMode="MediumQuality"
+                                    />
+                                <Border
+                                    Background="#46CDCF"
+                                    CornerRadius="100"
+                                    Grid.Column="1"
+                                    Height="25"
+                                    HorizontalAlignment="Right"
+                                    Margin="10"
+                                    Width="25">
+                                    <Label
+                                        Content="{Binding ProductCounter}"
+                                        FontStyle="Normal"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center" />
+                                </Border>
+                            </Grid>
+                        </StackPanel>
+                        <!--  Template for removing background  -->
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="1">
+                                    <ContentPresenter
+                                        Content="{TemplateBinding Content}"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Border
+                        Background="#46CDCF"
+                        CornerRadius="5"
+                        HorizontalAlignment="Center"
+                        Margin="2.5"
+                        Width="150">
+                        <TextBlock
+                            Margin="2.5"
+                            Name="Total"
+                            Text="{Binding Total, StringFormat='Total Price: {0:0.00}'}"
+                            TextAlignment="Start" />
+                    </Border>
+                </StackPanel>
+            </Grid>
+
+            <!--  Navigation Buttons  -->
+            <Grid
+                ColumnDefinitions="200,200,200,200,200"
+                HorizontalAlignment="Center"
+                Margin="10"
+                ShowGridLines="False">
+                <Button
+                    Background="#aeb6bf"
+                    Command="{Binding GoToHardwareCommand}"
+                    Content="Hardware"
+                    FontSize="25"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center" />
+                <Button
+                    Background="#aeb6bf"
+                    Command="{Binding GoToDesktopCommand}"
+                    Content="Desktop"
+                    FontSize="25"
+                    Grid.Column="1"
+                    HorizontalAlignment="Center" />
+                <Button
+                    Background="#aeb6bf"
+                    Command="{Binding GoToAccessoriesCommand}"
+                    Content="Accessories"
+                    FontSize="25"
+                    Grid.Column="2"
+                    HorizontalAlignment="Center" />
+                <Button
+                    Background="#aeb6bf"
+                    Command="{Binding GoToLaptopCommand}"
+                    Content="Laptop"
+                    FontSize="25"
+                    Grid.Column="3"
+                    HorizontalAlignment="Center" />
+                <Button
+                    Background="#aeb6bf"
+                    Command="{Binding GoToResourceCommand}"
+                    Content="Resource"
+                    FontSize="25"
+                    Grid.Column="4"
+                    HorizontalAlignment="Center" />
+            </Grid>
+
+            <!--  Page Content  -->
+            <ContentControl Content="{Binding CurrentPage}" />
+            <Grid ColumnDefinitions="*,*">
+                <Image
+                    Grid.Column="0"
+                    HorizontalAlignment="Right"
+                   
+                    Width="50" />
+                <Image
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"
+                   
+                    Width="50" />
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

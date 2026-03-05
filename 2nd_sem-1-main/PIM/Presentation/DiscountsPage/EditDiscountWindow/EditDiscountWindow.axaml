@@ -1,0 +1,70 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PIM_Presentation.EditDiscountWindow"
+        Width="750" Height="420"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        Title="Edit Discount">
+
+  <StackPanel Margin="20" Spacing="12">
+    <TextBlock Text="Edit Discount" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+
+    <!-- Discount ID (read-only) -->
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBlock Text="ID:" Width="100" VerticalAlignment="Center"/>
+      <TextBox x:Name="DiscountIdTextBox"
+               IsReadOnly="True"
+               Background="LightGray"
+               Width="200"/>
+    </StackPanel>
+
+    <!-- Product/Category Name (read-only) -->
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBlock Text="Applies To:" Width="100" VerticalAlignment="Center"/>
+      <TextBox x:Name="TargetTextBox"
+               IsReadOnly="True"
+               Background="LightGray"
+               Width="200"/>
+    </StackPanel>
+
+    <!-- Percentage -->
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBlock Text="Percentage %:" Width="100" VerticalAlignment="Center"/>
+      <TextBox x:Name="DiscountPctBox" Width="200"/>
+    </StackPanel>
+
+    <!-- Start Date -->
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBlock Text="Start Date:" Width="100" VerticalAlignment="Center"/>
+      <DatePicker x:Name="StartDatePicker"/>
+    </StackPanel>
+
+    <!-- End Date -->
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBlock Text="End Date:" Width="100" VerticalAlignment="Center"/>
+      <DatePicker x:Name="EndDatePicker"/>
+    </StackPanel>
+
+    <!-- Status message -->
+    <TextBlock x:Name="StatusTextBlock"
+               HorizontalAlignment="Center"
+               TextWrapping="Wrap"/>
+
+    <!-- Actions -->
+    <StackPanel Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                Spacing="30"
+                Margin="0,20,0,0">
+      <Button Content="Cancel"
+              Width="75"
+              Background="LightCoral"
+              Click="Cancel_Click"
+              CornerRadius="25" HorizontalContentAlignment="Center"/>
+      <Button Content="Save"
+              Width="75"
+              Background="LightGreen"
+              Click="Save_Click"
+              CornerRadius="25" HorizontalContentAlignment="Center"/>
+    </StackPanel>
+  </StackPanel>
+</Window>

@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PIM_Presentation.DeleteDiscountWindow"
+        Width="400" Height="400"
+        Title="Delete Discount"
+        WindowStartupLocation="CenterScreen">
+  <Border Padding="20" CornerRadius="10" BorderBrush="Black" BorderThickness="1">
+  <StackPanel Spacing="15" HorizontalAlignment="Stretch">
+    <TextBlock Text="You are about to delete following discount:" 
+               FontSize="18" FontWeight="Bold" 
+               HorizontalAlignment="Center"/>
+
+    <!-- Discount ID -->
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBlock Text="ID:" Width="100" VerticalAlignment="Center"/>
+      <TextBox x:Name="DiscountIdTextBox" IsReadOnly="True" Width="240"/>
+    </StackPanel>
+
+    <!-- Discount Percentage -->
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBlock Text="Percentage:" Width="100" VerticalAlignment="Center"/>
+      <TextBox x:Name="DiscountPctTextBox" IsReadOnly="True" Width="240"/>
+    </StackPanel>
+
+    <!-- Start Date -->
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBlock Text="Start Date:" Width="100" VerticalAlignment="Center"/>
+      <TextBox x:Name="StartDateTextBox" IsReadOnly="True" Width="240"/>
+    </StackPanel>
+
+    <!-- End Date -->
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBlock Text="End Date:" Width="100" VerticalAlignment="Center"/>
+      <TextBox x:Name="EndDateTextBox" IsReadOnly="True" Width="240"/>
+    </StackPanel>
+
+    <!-- Affected Target (Product or Category) -->
+    <StackPanel Orientation="Horizontal" Spacing="8">
+      <TextBlock Text="Applies To:" Width="100" VerticalAlignment="Center"/>
+      <TextBox x:Name="TargetTextBox" IsReadOnly="True" Width="240"/>
+    </StackPanel>
+
+    <!-- Buttons -->
+    <StackPanel Orientation="Horizontal" 
+                HorizontalAlignment="Center" 
+                Spacing="30" Margin="0,20,0,0">
+      <Button Content="Cancel"
+              Width="75"
+              Background="LightCoral"
+              Click="Cancel_Click"
+              CornerRadius="25"  HorizontalContentAlignment="Center"/>
+      <Button Content="Delete"
+              Width="75"
+              Background="LightGreen"
+              Click="Delete_Click"
+              CornerRadius="25"  HorizontalContentAlignment="Center"/>
+    </StackPanel>
+  </StackPanel>
+    </Border>
+</Window>

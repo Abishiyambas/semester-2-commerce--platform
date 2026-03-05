@@ -1,0 +1,159 @@
+<UserControl
+    Height="1050"
+    Width="1400"
+    x:Class="SHOP.Views.ProductDetailPageView"
+    x:DataType="vm:ProductDetailPageViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:vm="clr-namespace:SHOP.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <StackPanel>
+        <Border CornerRadius="25">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="50%, 100%" StartPoint="50%, 0%">
+                    <GradientStop Color="#A8E6CF" Offset="0" />
+                    <GradientStop Color="#46CDCF" Offset="0.5" />
+                    <GradientStop Color="#3D84A8" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid
+                ColumnDefinitions="Auto,*"
+                RowDefinitions="*,*,*"
+                ShowGridLines="True">
+
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Height="350"
+                    HorizontalAlignment="Center"
+                    Margin="20"
+                    Source="{Binding CurrentProduct.ProductImage}"
+                    Stretch="UniformToFill"
+                    VerticalAlignment="Center"
+                    Width="350">
+                    <Image.Clip>
+                        <!--
+                            this makes the pictures in pdp page rounded by drawing its path with pathGeometry. (you start at position 20,50, because of a margin of 20 and a size of 30,
+                            then you draw the circle and end in the same position)
+                        -->
+                        <RectangleGeometry
+                            RadiusX="30"
+                            RadiusY="30"
+                            Rect="0,0,350,350" />
+                    </Image.Clip>
+                </Image>
+                <ItemsControl Grid.Column="1" Grid.Row="0">
+                    <TextBlock
+                        FontSize="30"
+                        FontWeight="Medium"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top">
+                        <Run Text="{Binding CurrentProduct.Name}" />
+                        <LineBreak />
+                        <Run FontSize="16" Text="Description:" />
+                        <LineBreak />
+                        <Run Text="{Binding CurrentProduct.DescriptionPath}" />
+                    </TextBlock>
+                </ItemsControl>
+                <TextBlock
+                    FontSize="20"
+                    FontWeight="Medium"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalAlignment="Right"
+                    Text="{Binding CurrentProduct.Price, StringFormat='Price {0} dkk'}"
+                    VerticalAlignment="Bottom" />
+                <Button
+                    BorderThickness="3"
+                    Click="AddToCart"
+                    Focusable="True"
+                    FontSize="18"
+                    FontWeight="Bold"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    HorizontalAlignment="Right"
+                    Margin="10"
+                    VerticalAlignment="Bottom">
+                    Add to Cart
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="100%, 50%" StartPoint="0%, 50%">
+                            <GradientStop Color="SeaGreen" Offset="0.1" />
+                            <GradientStop Color="MediumSeaGreen" Offset="1" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Grid
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    RowDefinitions="*,*">
+                    <Grid
+                        ColumnDefinitions="*, Auto"
+                        Grid.Row="0"
+                        Margin="10"
+                        RowDefinitions="Auto">
+
+                        <!--  TextBox inside Border, fills available space  -->
+                        <Border
+                            Background="Azure"
+                            CornerRadius="5"
+                            Grid.Column="0"
+                            Height="50"
+                            Margin="0">
+                            <TextBox
+                                AcceptsReturn="True"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                CornerRadius="5"
+                                GotFocus="ClearOnFocus"
+                                Margin="0"
+                                Name="AddReviewBox"
+                                Text="{Binding NewReviewText, UpdateSourceTrigger=PropertyChanged}"
+                                Watermark="Write review..." />
+                        </Border>
+
+                        <!--  Button aligned to the right of the TextBox  -->
+                        <Border
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            Margin="10,0,0,0">
+                            <Button Command="{Binding AddReviewCommand}" Content="Add Review" />
+                        </Border>
+                    </Grid>
+
+
+                    <Border
+                        Background="Azure"
+                        CornerRadius="5"
+                        Focusable="False"
+                        Grid.Row="1"
+                        Height="250"
+                        Margin="10">
+                        <ListBox
+                            Background="Transparent"
+                            Focusable="False"
+                            IsTabStop="False"
+                            ItemsSource="{Binding CurrentProduct.ReviewList}"
+                            Name="ReviewBox">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock FontWeight="Bold" Text="{Binding Reviewer.Name}" />
+                                        <TextBlock
+                                            Margin="0,2,0,0"
+                                            Text="{Binding Text}"
+                                            TextWrapping="Wrap" />
+                                        <TextBlock
+                                            FontSize="10"
+                                            Foreground="Gray"
+                                            Margin="0,2,0,0"
+                                            Text="{Binding Date}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Border>
+    </StackPanel>
+</UserControl>

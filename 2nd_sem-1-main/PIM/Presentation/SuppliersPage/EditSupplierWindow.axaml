@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="400" Height="220"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        x:Class="PIM_Presentation.EditSupplierWindow"
+        Title="Update Supplier">
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="Edit Supplier Name:"/>
+        <TextBox x:Name="SupplierRow"/>
+
+        <TextBlock Text="Edit Phone Number:"/>
+        <TextBox x:Name="PhoneRow"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+            <Button Name="CancelButton" Content="Cancel" Background="LightCoral" Click="CancelButtonHandler" HorizontalContentAlignment="Center" CornerRadius="25" Width="75"/>
+            <Button Name="UpdateButton" Content="Update" Background="LightGreen" Click="UpdateButtonHandler" HorizontalContentAlignment="Center" CornerRadius="25" Width="75"/>
+        </StackPanel>
+    
+    </StackPanel>
+</Window>

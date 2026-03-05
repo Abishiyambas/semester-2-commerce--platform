@@ -1,0 +1,30 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PIM.Presentation.StatisticsPopupRating">
+   <StackPanel>
+        <!-- Window Grid -->
+        <Grid RowDefinitions="60 70 10*" ColumnDefinitions="800 400">
+            <Label Name="ProductNameLabel" Grid.Row="0" Grid.Column="0" FontSize="20" Margin="25,15,0,0"></Label>
+            <!-- Product Grid -->
+            <Border Grid.Column="0" Grid.Row="1" Margin="25 25 25 0" BorderBrush="Black" BorderThickness="1" CornerRadius="10 10 0 0">
+                <Grid Margin="10" RowDefinitions="*" ColumnDefinitions="6* 18*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <!-- Header row -->
+                    <TextBlock Grid.Row="0" Grid.Column="0">Rating</TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="1">Comment</TextBlock>
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="0" Grid.Row="2" MaxHeight="450" Margin="25 0 25 50" BorderBrush="Black" BorderThickness="1 0 1 1" CornerRadius="0 0 10 10">
+                <ScrollViewer>
+                    <!-- Product Grid (Dynamic Content) -->
+                    <Grid Name="RatingGrid" Margin="10" ColumnDefinitions="6* 18*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <!-- Dynamic rows will be added here in your code-behind -->
+                    </Grid>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,370 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="600"
+             x:Class="PIM_Presentation.DiscountsPage">
+  
+
+  <!-- Shared Styles -->
+  <UserControl.Styles>
+    <!-- button styling -->
+    <Style Selector="Button">
+      <Setter Property="CornerRadius" Value="6"/>
+      <Setter Property="Padding" Value="10,6"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="Margin" Value="4"/>
+    </Style>
+    <!-- input controls -->
+    <Style Selector="TextBox, DatePicker">
+      <Setter Property="CornerRadius" Value="4"/>
+      <Setter Property="Padding" Value="6"/>
+      <Setter Property="Margin" Value="4,2"/>
+    </Style>
+  </UserControl.Styles>
+
+  <Grid Margin="10" RowDefinitions="Auto, *" ColumnDefinitions="2*, 3*">
+    <!-- Page Title -->
+    <TextBlock Grid.ColumnSpan="2"
+               Text="Discount Management"
+               FontSize="28"
+               FontWeight="Bold"
+               Margin="0 0 0 16"/>
+
+    <!-- Create Discounts -->
+    <Border Grid.Row="1" Grid.Column="0"
+            Background="WhiteSmoke"
+            CornerRadius="10"
+            Padding="16">
+      <TabControl>
+        <!-- Single Discounts -->
+        <TabItem Header="Single Discount">
+          <ScrollViewer>
+            <StackPanel Spacing="16" Margin="0,8">
+              <!-- Search -->
+              <Grid>
+                <TextBox x:Name="SearchBox" Watermark="Search product..." KeyUp="OnSearchTextChanged" />
+                
+                <Popup x:Name="SuggestionsPopup"
+                       PlacementTarget="{Binding ElementName=SearchBox}"
+                       IsLightDismissEnabled="True">
+                  <Border Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="4">
+                    <ListBox x:Name="SuggestionsList"
+                             SelectionChanged="OnSuggestionChosen">
+                      <ListBox.ItemTemplate>
+                        <DataTemplate>
+                          <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                      </ListBox.ItemTemplate>
+                    </ListBox>
+                  </Border>
+                </Popup>
+              </Grid>
+
+              <!-- Product Info -->
+              <StackPanel Orientation="Horizontal" Spacing="8">
+                <StackPanel>
+                  <TextBlock HorizontalAlignment="Center">Name</TextBlock>
+                  <TextBox x:Name="NameBox" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel>
+                  <TextBlock HorizontalAlignment="Center">SKU</TextBlock>
+                  <TextBox x:Name="SkuBox" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel>
+                  <TextBlock HorizontalAlignment="Center">Category</TextBlock>
+                  <TextBox x:Name="CatBox" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel>
+                  <TextBlock HorizontalAlignment="Center">Normal Price</TextBlock>
+                  <TextBox x:Name="NormalPriceBox" IsReadOnly="True"/>
+                </StackPanel>
+              </StackPanel>
+
+              <!-- Discount Inputs -->
+              <StackPanel Orientation="Horizontal" Spacing="8">
+                <StackPanel>
+                  <TextBlock HorizontalAlignment="Center">Discount %</TextBlock>
+                  <TextBox x:Name="DiscPercentBox"/>
+                </StackPanel>
+                <StackPanel>
+                  <TextBlock HorizontalAlignment="Center">Discount Price</TextBlock>
+                  <TextBox x:Name="DiscPriceBox"/>
+                </StackPanel>
+              </StackPanel>
+
+              <!-- Date Pickers -->
+              <StackPanel Spacing="8">
+                <StackPanel Spacing="2">
+                  <TextBlock>Start Date</TextBlock>
+                  <DatePicker x:Name="StartDatePicker"/>
+                </StackPanel>
+                <StackPanel Spacing="2">
+                  <TextBlock>End Date</TextBlock>
+                  <DatePicker x:Name="EndDatePicker"/>
+                </StackPanel>
+              </StackPanel>
+
+              <!-- Actions -->
+              <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="12">
+                <Button x:Name="CancelSingleButton"  Content="Cancel"  Background="LightCoral" Foreground="White" CornerRadius="10" Click="ClearSingleFormHandler"/>
+                <Button x:Name="ConfirmSingleButton" Content="Confirm" Background="LightGreen" Foreground="White" CornerRadius=" 10" Click="OnConfirmSingle"/>
+              </StackPanel>
+            </StackPanel>
+          </ScrollViewer>
+        </TabItem>
+
+        <!-- Category / Grouping Discounts -->
+        <TabItem Header="Category Discount">
+          <ScrollViewer>
+            <StackPanel Spacing="16" Margin="0,8">
+              <!-- Category Search -->
+              <Grid>
+                <TextBox x:Name="CategorySearchBox" Watermark="Search category..." KeyUp="OnCategorySearchTextChanged" />
+                
+                <Popup x:Name="CategorySuggestionsPopup"
+                       PlacementTarget="{Binding ElementName=CategorySearchBox}"
+                       IsLightDismissEnabled="True">
+                  <Border Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="4">
+                    <ListBox x:Name="CategorySuggestionsList"
+                             SelectionChanged="OnCategorySuggestionChosen">
+                      <ListBox.ItemTemplate>
+                        <DataTemplate>
+                          <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                      </ListBox.ItemTemplate>
+                    </ListBox>
+                  </Border>
+                </Popup>
+              </Grid>
+              <!-- Category Info -->
+              <StackPanel Orientation="Horizontal" Spacing="8">
+                <StackPanel>
+                  <TextBlock>Category</TextBlock>
+                  <TextBox x:Name="CategoryNameBox" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel>
+                  <TextBlock>Product Count</TextBlock>
+                  <TextBox x:Name="ProductCountBox" IsReadOnly="True"/>
+                </StackPanel>
+              </StackPanel>
+
+              <!-- Discount Input -->
+              <StackPanel Orientation="Horizontal" Spacing="8">
+                <StackPanel>
+                  <TextBlock>Discount %</TextBlock>
+                  <TextBox x:Name="GroupingDiscPercentBox"/>
+                </StackPanel>
+              </StackPanel>
+
+              <!-- Date Pickers -->
+              <StackPanel Spacing="8">
+                <StackPanel Spacing="2">
+                  <TextBlock>Start Date</TextBlock>
+                  <DatePicker x:Name="GroupingStartDatePicker"/>
+                </StackPanel>
+                <StackPanel Spacing="2">
+                  <TextBlock>End Date</TextBlock>
+                  <DatePicker x:Name="GroupingEndDatePicker"/>
+                </StackPanel>
+              </StackPanel>
+
+              <!-- Actions -->
+              <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="12">
+                <Button x:Name="CancelGroupingButton"  Content="Cancel"  Background="LightCoral" Foreground="White" Click="ClearGroupingFormHandler"/>
+                <Button x:Name="ConfirmGroupingButton" Content="Confirm" Background="LightGreen" Foreground="White" Click="OnConfirmGrouping"/>
+              </StackPanel>
+            </StackPanel>
+          </ScrollViewer>
+        </TabItem>
+      </TabControl>
+    </Border>
+
+    <!-- Right: Current Discounts List -->
+    <Border Grid.Row="1" Grid.Column="1"
+            Background="WhiteSmoke"
+            CornerRadius="10"
+            Padding="16">
+      <TabControl x:Name="MainTab" SelectionChanged="OnMainTabSelectionChanged">
+
+
+        <!-- Product Discounts -->
+        <TabItem Header="Product Discounts">
+          <TabControl TabStripPlacement="Top" SelectionChanged="OnProductTabSelectionChanged">
+            <TabItem Header="Past">
+              <StackPanel>
+                <Border Margin="25,25,25,0" BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,0,0">
+                  <Grid Margin="10" RowDefinitions="*" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
+                    <TextBlock Grid.Column="1" HorizontalAlignment="Center">  
+                      <Run Text="Start"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>                    
+                    <TextBlock Grid.Column="2" HorizontalAlignment="Center">
+                      <Run Text="End"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">Discount</TextBlock>
+                    <TextBlock Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">Edit</TextBlock>
+                    <TextBlock Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">Delete</TextBlock>
+                  </Grid>
+                </Border>
+                <Border MaxHeight="450" Margin="25,0,25,50" BorderBrush="Black" BorderThickness="1,0,1,1" CornerRadius="0,0,10,10">
+                  <ScrollViewer>
+                    <Grid x:Name="PastGrid" Margin="10" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                  </ScrollViewer>
+                </Border>
+              </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Active">
+              <StackPanel>
+                <Border Margin="25,25,25,0" BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,0,0">
+                  <Grid Margin="10" RowDefinitions="*" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
+                    <TextBlock Grid.Column="1" HorizontalAlignment="Center">  
+                      <Run Text="Start"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>                    
+                    <TextBlock Grid.Column="2" HorizontalAlignment="Center">
+                      <Run Text="End"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">Discount</TextBlock>
+                    <TextBlock Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">Edit</TextBlock>
+                    <TextBlock Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">Delete</TextBlock>
+                  </Grid>
+                </Border>
+                <Border MaxHeight="450" Margin="25,0,25,50" BorderBrush="Black" BorderThickness="1,0,1,1" CornerRadius="0,0,10,10">
+                  <ScrollViewer>
+                    <Grid x:Name="ActiveGrid" Margin="10" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                  </ScrollViewer>
+                </Border>
+              </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Upcoming">
+              <StackPanel>
+                <Border Margin="25,25,25,0" BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,0,0">
+                  <Grid Margin="10" RowDefinitions="*" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
+                    <TextBlock Grid.Column="1" HorizontalAlignment="Center">  
+                      <Run Text="Start"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>                    
+                    <TextBlock Grid.Column="2" HorizontalAlignment="Center">
+                      <Run Text="End"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">Discount</TextBlock>
+                    <TextBlock Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">Edit</TextBlock>
+                    <TextBlock Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">Delete</TextBlock>
+                  </Grid>
+                </Border>
+                <Border MaxHeight="450" Margin="25,0,25,50" BorderBrush="Black" BorderThickness="1,0,1,1" CornerRadius="0,0,10,10">
+                  <ScrollViewer>
+                    <Grid x:Name="UpcomingGrid" Margin="10" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                  </ScrollViewer>
+                </Border>
+              </StackPanel>
+            </TabItem>
+          </TabControl>
+        </TabItem>
+
+        <!-- Category Discounts -->
+        <TabItem Header="Category Discounts">
+          <TabControl TabStripPlacement="Top" SelectionChanged="OnCategoryTabSelectionChanged">
+            <TabItem Header="Past">
+              <StackPanel>
+                <Border Margin="25,25,25,0" BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,0,0">
+                  <Grid Margin="10" RowDefinitions="*" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
+                    <TextBlock Grid.Column="1" HorizontalAlignment="Center">  
+                      <Run Text="Start"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>                    
+                    <TextBlock Grid.Column="2" HorizontalAlignment="Center">
+                      <Run Text="End"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">Discount</TextBlock>
+                    <TextBlock Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">Edit</TextBlock>
+                    <TextBlock Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">Delete</TextBlock>
+                  </Grid>
+                </Border>
+                <Border MaxHeight="450" Margin="25,0,25,50" BorderBrush="Black" BorderThickness="1,0,1,1" CornerRadius="0,0,10,10">
+                  <ScrollViewer>
+                    <Grid x:Name="PastCatGrid" Margin="10" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                  </ScrollViewer>
+                </Border>
+              </StackPanel>
+            </TabItem>
+            <TabItem Header="Active">
+              <StackPanel>
+                <Border Margin="25,25,25,0" BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,0,0">
+                  <Grid Margin="10" RowDefinitions="*" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
+                    <TextBlock Grid.Column="1" HorizontalAlignment="Center">  
+                      <Run Text="Start"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>                    
+                    <TextBlock Grid.Column="2" HorizontalAlignment="Center">
+                      <Run Text="End"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">Discount</TextBlock>
+                    <TextBlock Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">Edit</TextBlock>
+                    <TextBlock Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">Delete</TextBlock>
+                  </Grid>
+                </Border>
+                <Border MaxHeight="450" Margin="25,0,25,50" BorderBrush="Black" BorderThickness="1,0,1,1" CornerRadius="0,0,10,10">
+                  <ScrollViewer>
+                    <Grid x:Name="ActiveCatGrid" Margin="10" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                  </ScrollViewer>
+                </Border>
+              </StackPanel>
+            </TabItem>
+            <TabItem Header="Upcoming">
+              <StackPanel>
+                <Border Margin="25,25,25,0" BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,0,0">
+                  <Grid Margin="10" RowDefinitions="*" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
+                    <TextBlock Grid.Column="1" HorizontalAlignment="Center">  
+                      <Run Text="Start"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>                    
+                    <TextBlock Grid.Column="2" HorizontalAlignment="Center">
+                      <Run Text="End"/>
+                      <LineBreak/>
+                      <Run Text="Date"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">Discount</TextBlock>
+                    <TextBlock Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">Edit</TextBlock>
+                    <TextBlock Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">Delete</TextBlock>
+                  </Grid>
+                </Border>
+                <Border MaxHeight="450" Margin="25,0,25,50" BorderBrush="Black" BorderThickness="1,0,1,1" CornerRadius="0,0,10,10">
+                  <ScrollViewer>
+                    <Grid x:Name="UpcomingCatGrid" Margin="10" ColumnDefinitions="* * * * * *" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                  </ScrollViewer>
+                </Border>
+              </StackPanel>
+            </TabItem>
+          </TabControl>
+        </TabItem>
+
+      </TabControl>
+    </Border>
+  </Grid>
+</UserControl>

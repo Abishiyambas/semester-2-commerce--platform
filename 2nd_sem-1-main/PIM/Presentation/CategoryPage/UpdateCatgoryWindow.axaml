@@ -1,0 +1,16 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="400" Height="150"
+        Title="Update Category"
+        WindowStartupLocation="CenterOwner"
+        x:Class="PIM_Presentation.UpdateCategoryWindow">
+
+  <StackPanel Margin="20" Spacing="10">
+    <TextBlock Text="Edit Category Name:"/>
+    <TextBox Name="CategoryNameBox"/>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+      <Button Name="CancelButton" Content="Cancel" Background="LightCoral" HorizontalContentAlignment="Center" CornerRadius="25" Width="75" />
+      <Button Name="UpdateButton" Content="Update" Background="LightGreen" HorizontalContentAlignment="Center" CornerRadius="25" Width="75"/>
+    </StackPanel>
+  </StackPanel>
+</Window>

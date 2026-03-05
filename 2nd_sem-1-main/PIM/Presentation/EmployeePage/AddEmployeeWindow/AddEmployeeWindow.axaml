@@ -1,0 +1,54 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Width="350" Height="450"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"             
+        x:Class="PIM_Presentation.AddEmployeeWindow"
+        Title="Add Employee">
+     
+    <StackPanel Margin="50" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="15">
+    
+        <!-- Employee full name -->
+        <StackPanel Spacing="5">
+            <TextBlock>Employee Name</TextBlock>
+            <TextBox Name="EmployeeNameBox" Width="200" Watermark="Enter employee's name..." HorizontalContentAlignment="Left"/>
+        </StackPanel>
+            
+        <!-- Password -->
+        <StackPanel Spacing="5">
+            <Grid ColumnDefinitions="* *">
+                <TextBlock Grid.Column="0" VerticalAlignment="Bottom">Password</TextBlock>
+                <CheckBox Name="ShowPasswordCheckBox" Click="ShowPasswordHandler" Grid.Column="1" HorizontalAlignment="Right">Show</CheckBox>
+            </Grid>
+            <TextBox Name="PasswordTextBox" Width="200" HorizontalAlignment="Left" PasswordChar="*" Watermark="Enter password"/>
+        </StackPanel>  
+        
+        <!-- Confirm Password -->
+        <StackPanel Spacing="5">
+            <Grid ColumnDefinitions="* *">
+                <TextBlock Grid.Column="0" VerticalAlignment="Bottom">Re-enter password</TextBlock>
+                <CheckBox Name="ShowConfirmPasswordCheckBox" Click="ShowConfirmPasswordHandler" Grid.Column="1" HorizontalAlignment="Right">Show</CheckBox>
+            </Grid>
+            <TextBox Name="ConfirmPasswordTextBox" Width="200" HorizontalAlignment="Left" PasswordChar="*" Watermark="Enter again"/>
+        </StackPanel>  
+        
+        <!-- Authorization CheckBox -->
+        <StackPanel Spacing="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock VerticalAlignment="Center">Authorize Employee?</TextBlock>
+            <CheckBox Name="AuthorizedCheckBox" IsChecked="False" Margin="10,0,0,0"/>
+        </StackPanel>
+        
+        <!-- Status Text -->
+        <TextBlock x:Name="StatusTextBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
+        
+        <!-- Confirmation -->
+        <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button Name="CancelButton" Click="CancelButtonHandler" CornerRadius="25" Width="75" Background="LightCoral" HorizontalContentAlignment="Center">Cancel</Button>
+            <Button Name="DoneButton" Click="DoneButtonHandler" CornerRadius="25" Width="75" Background="LightGreen" HorizontalContentAlignment="Center">Confirm</Button>
+        </StackPanel>
+        
+    </StackPanel>
+    
+</Window>

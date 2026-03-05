@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PIM_Presentation.RemoveCategoryPage"
+        Width="400" Height="250"
+        Title="Delete Item"
+        WindowStartupLocation="CenterScreen">
+    <Border Padding="20" CornerRadius="10" BorderBrush="Black" BorderThickness="1">
+        <StackPanel Spacing="15" HorizontalAlignment="Center">
+            
+            <TextBlock Text="You are deleting following Category" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+            
+            <StackPanel  Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="Name:" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="CategoryRow" Text="Some Category" IsReadOnly="True" Width="200"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="40" Margin="0,20,0,0">
+                <Button Content="Cancel" Width="75" Background="LightCoral" Click="Cancel_Click" CornerRadius="25"  HorizontalContentAlignment="Center"/>
+                <Button Content="Delete" Width="75" Background="LightGreen" Click="Delete_Click" CornerRadius="25"  HorizontalContentAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>

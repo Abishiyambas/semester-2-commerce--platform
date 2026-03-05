@@ -1,0 +1,11 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="PIM_Presentation.UnauthorizedPage">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+        <TextBlock Text="Unauthorized" 
+                   HorizontalAlignment="Center" 
+                   FontSize="50" 
+                   Foreground="Red"/>
+        <Button Content="Go Back" Width="120" Height="70" FontSize="20" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CornerRadius="10" Background="LightCoral" Click="GoBack_Click"/>
+    </StackPanel>
+</UserControl>

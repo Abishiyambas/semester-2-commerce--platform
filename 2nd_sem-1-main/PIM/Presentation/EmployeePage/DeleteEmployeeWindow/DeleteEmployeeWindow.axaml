@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PIM_Presentation.DeleteEmployeeWindow"
+        Width="400" Height="300"
+        Title="Delete Employee"
+        WindowStartupLocation="CenterScreen">
+    <Border Padding="20" CornerRadius="10" BorderBrush="Black" BorderThickness="1">
+    <StackPanel Spacing="15" HorizontalAlignment="Center">
+            <!-- Heading -->
+            <TextBlock Text="You are deleting following employee" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+            
+            <!-- Employee Name -->
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="Name:" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="NameTextBox" Text="Employee Name" IsReadOnly="True" Width="200"/>
+            </StackPanel>
+            
+            <!-- Employee ID -->
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="ID:" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="IdTextBox" Text="Employee ID" IsReadOnly="True" Width="200"/>
+            </StackPanel>
+            
+            <!-- Authorization Status -->
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="Authorization:" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="AuthorizationTextBox" Text="Status" IsReadOnly="True" Width="200"/>
+            </StackPanel>
+            
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="40" Margin="0,20,0,0">
+                <Button Content="Cancel" Width="75" Background="LightCoral" Click="Cancel_Click" CornerRadius="25" HorizontalContentAlignment="Center"/>
+                <Button Content="Delete" Width="75" Background="LightGreen" Click="Delete_Click" CornerRadius="25" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+        </Border>
+</Window>

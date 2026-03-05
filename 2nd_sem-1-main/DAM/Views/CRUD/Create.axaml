@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DAM.Views.CRUD.Create"
+        
+        Title="Create Asset"
+        RequestedThemeVariant="Light">
+        
+    <StackPanel VerticalAlignment="Center">
+        <Grid RowDefinitions="*,*,*,*,*,*" ColumnDefinitions="105,105,105" HorizontalAlignment="Center">
+            <Label Content="UUID" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Label Content="Name" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Label Content="Type" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Label Content="Path" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                        
+            <TextBox Name="UuidBox" Grid.Row="0" Grid.Column="1" Margin="5"></TextBox>
+            <TextBox Name="NameBox" Grid.Row="1" Grid.Column="1" Margin="5"></TextBox>
+            <TextBox Name="TypeBox" Grid.Row="2" Grid.Column="1" Margin="5"></TextBox>
+            <TextBox Name="PathBox" Grid.Row="3" Grid.Column="1" Margin="5"></TextBox>
+                        
+            <Button Grid.Row="4" Grid.Column="1" Content="Choose file" Click="Choose_File" HorizontalAlignment="Center" Margin="0,15,0,30"></Button>
+                
+            <Button Grid.Row="5" Grid.Column="1" Content="Create" Click="Button_CreateFile" HorizontalAlignment="Center"></Button>
+        </Grid>
+    </StackPanel>
+        
+</Window>

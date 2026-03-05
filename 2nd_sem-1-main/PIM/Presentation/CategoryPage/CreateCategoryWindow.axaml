@@ -1,0 +1,16 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="400" Height="150"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        x:Class="PIM_Presentation.CreateCategoryWindow"
+        Title="Create Category">
+  <StackPanel Margin="20" Spacing="10">
+    <TextBlock Text="Category Name"/>
+    <TextBox Name="CategoryNameBox" Watermark="Enter category name..."/>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+      <Button Name="CancelButton" Content="Cancel" Background="LightCoral" CornerRadius="25" Width="75" HorizontalContentAlignment="Center"/>
+      <Button Name="CreateButton" Content="Create" Background="LightGreen" CornerRadius="25" Width="75" HorizontalContentAlignment="Center"/>
+    </StackPanel>
+  </StackPanel>
+</Window>

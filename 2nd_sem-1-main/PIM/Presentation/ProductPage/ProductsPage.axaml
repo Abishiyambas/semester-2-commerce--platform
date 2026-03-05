@@ -1,0 +1,70 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="550"
+             x:Class="PIM_Presentation.ProductsPage">
+  <StackPanel>
+    
+    <!-- Welcome Text -->
+    <TextBlock x:Name="ActiveEmployeeTextBlock"
+               FontSize="25"
+               HorizontalAlignment="Left"
+               FontFamily="Segoe UI"
+               FontWeight="Bold"
+               Foreground="#2C3E50"
+               Margin="10,10,0,0"
+               TextWrapping="Wrap">
+      Welcome EmployeeName!
+    </TextBlock>
+    <!-- Welcome Text -->
+
+    
+    <!--TOP GRID-->
+    <Grid Margin="25 25 25 0" RowDefinitions="*" ColumnDefinitions="auto auto auto *">
+
+      <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Spacing="10">
+        <TextBox Name="SearchBox" Watermark="Search..." Width="250" VerticalContentAlignment="Center" KeyUp="SearchBox_KeyUp"></TextBox>
+        <Button Name="RefreshButton" Click="RefreshButtonHandler" Height="35" Width="35" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" Margin="0" Background="Transparent" ToolTip.Tip="Reload all your Products"></Button>
+      </StackPanel>
+
+      
+      <Button Grid.Row="1" Grid.Column="1" Margin="25 0 0 0" CornerRadius="20" Background="LightSkyBlue" ToolTip.Tip="Add your product" Click="AddProductButtonHandler">Add Product</Button>
+
+      <ComboBox Name="ProductFilterComboBox" Grid.Column="3" Margin="200,0,0,0" SelectedIndex="0">
+        <ComboBoxItem>Name (A-Z)</ComboBoxItem>
+        <ComboBoxItem>Name (Z-A)</ComboBoxItem>
+        <ComboBoxItem>Rating (High-Low)</ComboBoxItem>
+        <ComboBoxItem>Rating (Low-High)</ComboBoxItem>
+        <ComboBoxItem>Price (High-Low)</ComboBoxItem>
+        <ComboBoxItem>Price (Low-High)</ComboBoxItem>
+      </ComboBox>
+    </Grid>
+    <!--TOP GRID-->
+    
+    <!--PRODUCT GRID-->
+    <Border  Margin="25 25 25 0" BorderBrush="Black" BorderThickness="1" CornerRadius="10 10 0 0">
+      <Grid Margin="10" RowDefinitions="*" ColumnDefinitions="8* 5* 6* 6* 4* 2* 4* 3* 3* 3*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBlock Grid.Row="0" Grid.Column="0">Name</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="1">Price</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="2">Category</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="3">Supplier</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="4">Rating</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="5">Active</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="6">Stock</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="7">Edit</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="8">Delete</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="9">Details</TextBlock>
+      </Grid>
+    </Border>
+    <Border MaxHeight="600" Margin="25 0 25 50" BorderBrush="Black" BorderThickness="1 0 1 1" CornerRadius="0 0 10 10">
+      <ScrollViewer>
+        <Grid Name="ProductGrid" Margin="10" ColumnDefinitions="8* 5* 6* 6* 4* 2* 4* 3* 3* 3*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Grid>
+      </ScrollViewer>
+    </Border>
+    
+    <!--PRODUCT GRID-->
+  
+  </StackPanel>
+  
+</UserControl>

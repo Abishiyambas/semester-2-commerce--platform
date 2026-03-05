@@ -1,0 +1,80 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>false</AvaloniaUseCompiledBindingsByDefault>
+    <LangVersion>12</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.1" />
+    <PackageReference Include="Avalonia" Version="11.0.0" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
+      <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+      <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql" Version="9.0.3" />
+    <PackageReference Include="NUnit" Version="4.2.2" />
+    <PackageReference Include="ScottPlot.Avalonia" Version="5.0.55" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="..\PIM\MainWindow.axaml.cs">
+      <DependentUpon>MainWindow.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="..\PIM\Presentation\AddProductWindow\AddProductWindow.axaml.cs">
+      <DependentUpon>AddProductWindow.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\EmployeePage\EmployeesPage.axaml.cs">
+      <DependentUpon>EmployeesPage.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Presentation\SuppliersPage\AddSupplierWindow.axaml.cs">
+      <DependentUpon>AddSupplierWindow.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\SuppliersPage\RemoveSupplierWindow.axaml.cs">
+      <DependentUpon>RemoveSupplierWindow.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\MainTabControl.axaml.cs">
+      <DependentUpon>MainTabControl.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\ProductPage\ProductDetailsWindow\ProductDetailsWindow.axaml.cs">
+      <DependentUpon>ProductDetailsWindow.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Presentation\ProductPage\ProductsPage.axaml.cs">
+      <DependentUpon>ProductsPage.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\CategoryPage\RemoveCategoryPage.cs">
+      <DependentUpon>RemoveCategoryPage.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\ProductPage\StockOrderPopup.axaml.cs">
+      <DependentUpon>StockOrderPopup.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Presentation\AddProductWindow\AddProductWindow.axaml" />
+    <UpToDateCheckInput Remove="Presentation\EditProductWindow\EditProductWindow.axaml" />
+    <UpToDateCheckInput Remove="Presentation\EditEmployeeWindow\EditEmployeeWindow.axaml" />
+    <UpToDateCheckInput Remove="Presentation\DeleteEmployeeWindow\DeleteEmployeeWindow.axaml" />
+    <UpToDateCheckInput Remove="Presentation\AddEmployeeWindow\AddEmployeeWindow.axaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Presentation\EmployeePage\AddEmployeeWindow\AddEmployeeWindow.axaml" />
+    <AdditionalFiles Include="Presentation\EmployeePage\DeleteEmployeeWindow\DeleteEmployeeWindow.axaml" />
+    <AdditionalFiles Include="Presentation\EmployeePage\EditEmployeeWindow\EditEmployeeWindow.axaml" />
+    <AdditionalFiles Include="Presentation\ProductPage\AddProductWindow\AddProductWindow.axaml" />
+    <AdditionalFiles Include="Presentation\ProductPage\EditProductWindow\EditProductWindow.axaml" />
+    <AdditionalFiles Include="Presentation\ProductPage\RemoveProductWindow\RemoveItemWindow.axaml" />
+  </ItemGroup>
+</Project>

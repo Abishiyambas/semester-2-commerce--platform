@@ -1,0 +1,63 @@
+<UserControl
+    Height="1050"
+    Width="1100"
+    mc:Ignorable="d"
+    x:Class="SHOP.Views.AccessoriesView"
+    x:DataType="vm:AccessoriesViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:SHOP.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Border CornerRadius="25">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="50%, 100%" StartPoint="50%, 0%">
+                <GradientStop Color="#A8E6CF" Offset="0" />
+                <GradientStop Color="#46CDCF" Offset="0.5" />
+                <GradientStop Color="#3D84A8" Offset="1" />
+            </LinearGradientBrush>
+        </Border.Background>
+         <StackPanel>
+            <ItemsControl ItemsSource="{Binding AccessoriesList }">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="6" HorizontalAlignment="Center" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Margin="5"
+                            Padding="5"
+                            Width="150">
+                            <StackPanel>
+                                <Border Background="Azure" CornerRadius="5">
+                                    <Button
+                                        Click="Button_OnClick"
+                                        Background="Transparent"
+                                        HorizontalAlignment="Center">
+                                        <StackPanel Height="175" Width="125">
+                                            <Image Height="100" Source="{Binding ProductImage}" />
+                                            <TextBlock
+                                                FontSize="16"
+                                                FontWeight="Bold"
+                                                Foreground="Black"
+                                                Text="{Binding Name}"
+                                                TextWrapping="Wrap" />
+                                            <TextBlock
+                                                FontSize="16"
+                                                FontWeight="Bold"
+                                                Foreground="Black"
+                                                Text="{Binding Price}" />
+                                        </StackPanel>
+                                    </Button>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Border>
+</UserControl>
