@@ -1,0 +1,202 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj": {}
+  },
+  "projects": {
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj",
+        "projectName": "PIM",
+        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj",
+        "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
+        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/abishiyambaskaran/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "Avalonia.Diagnostics": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "Avalonia.Fonts.Inter": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "Avalonia.Themes.Fluent": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[4.2.2, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "ScottPlot.Avalonia": {
+              "target": "Package",
+              "version": "[5.0.55, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj",
+        "projectName": "SHOP",
+        "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/SHOP.csproj",
+        "packagesPath": "/Users/abishiyambaskaran/.nuget/packages/",
+        "outputPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/SHOP/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/abishiyambaskaran/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj": {
+                "projectPath": "/Users/abishiyambaskaran/Desktop/Projekter/semester-2-commerce--platform/2nd_sem-1-main/PIM/PIM.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "Avalonia.Diagnostics": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "Avalonia.Fonts.Inter": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "Avalonia.Themes.Fluent": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[10.0.0-preview.1.25080.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
